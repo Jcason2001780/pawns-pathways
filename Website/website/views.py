@@ -7,7 +7,7 @@ def home():
 
     return render_template("index.html")
 
-@views.route('/leadership.html')
+@views.route('/leadership')
 def leadership():
 
     return render_template("/leadership/index.html")
