@@ -362,6 +362,13 @@ h3 {
   transform: rotate3d(0, 0, 1, -45deg);
 }
 
+.modal {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.less-round {
+  border-radius: 20px;
+}
 
 .navbar {
   padding: .5rem .5rem .5rem 2rem !important;

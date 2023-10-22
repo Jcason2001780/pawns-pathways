@@ -367,6 +367,13 @@
   }
 }
 
+@media (min-width: 768px) {
+  .modal-xl {
+    width: 90%;
+    max-width: 1000px;
+  }
+}
+
 @media screen and (max-width: 767px) {
 
   /* start of medium tablet styles */
