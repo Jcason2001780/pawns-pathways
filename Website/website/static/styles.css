@@ -391,11 +391,16 @@ h3 {
   white-space: nowrap;
 }
 
+.navbar .dropdown-item {
+  color: #555;
+}
+
 .navbar .dropdown-item:hover {
-  color: #ff5959;
-  background-color: white;
+  color: black;
+  background-color: #C9E0BF;
   -webkit-transition: .3s;
   transition: .3s;
+
 }
 
 .navbar .custom-toggler.navbar-toggler {
@@ -405,6 +410,10 @@ h3 {
 
 .navbar a {
   border: none;
+}
+
+.dropdown-menu {
+  background-color: #C9E0BF;
 }
 
 #intro {
@@ -773,13 +782,10 @@ ul {
 
 .zoom {
   transition: transform .2s;
-  margin: 0 auto;
 }
 
 .zoom:hover {
-  z-index: 3;
-  position: relative;
-  transform: scale(1.35);
+  opacity: 0.7;
 }
 
 #footer {
