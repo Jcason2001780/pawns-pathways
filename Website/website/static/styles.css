@@ -420,7 +420,12 @@ h3 {
 }
 
 .dropdown-menu {
+  display: none;
   background-color: #C9E0BF;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
 }
 
 #intro {
