@@ -507,7 +507,7 @@ h3 {
 
 .infinite-scroll-container {
   display: inline-block;
-  animation: scrollAnimation 20s linear infinite; 
+  animation: scrollAnimation 15s linear infinite; 
 }
 
 .cell {
