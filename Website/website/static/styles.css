@@ -229,6 +229,10 @@ b {
   background-position: right bottom;
 }
 
+.h1-center {
+  text-align: center;
+}
+
 h2 {
   padding-top: 20px;
   text-align: center;
@@ -493,6 +497,66 @@ h3 {
 #dropdownSelectTeam:focus {
   -webkit-box-shadow: inset 0 0 0 #ddd;
   box-shadow: inset 0 0 0 #ddd;
+}
+
+.infinite-scroll-wrapper {
+  width: 100%;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+.infinite-scroll-container {
+  display: inline-block;
+  animation: scrollAnimation 20s linear infinite; 
+}
+
+.cell {
+  display: inline-block;
+  width: 330px;  /* Adjusting width */
+  height: 375px; /* Adjusting height */
+  padding: 15px;
+  box-sizing: border-box;
+  margin-right: 15px;
+  text-align: center;
+  background-color: #E8E8E8; /* Setting the cell background to the color you provided */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cell-image {
+  width: 75%;
+  height: auto;
+  margin-bottom: 2px;
+}
+
+.cell-title {
+  margin: 8px 0;
+  font-weight: bold;
+  font-size: 28px;
+  color: #333333;
+}
+
+.cell-button {
+  background-color: #1874ac;
+  color: #ffffff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 2px;
+}
+
+.cell-button:hover {
+  background-color: #0056b3;
+}
+
+@keyframes scrollAnimation {
+  0% {
+      transform: translateX(0%);
+  }
+  100% {
+      transform: translateX(-50%);
+  }
 }
 
 .aboutus {
