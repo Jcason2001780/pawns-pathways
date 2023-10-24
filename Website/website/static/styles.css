@@ -501,7 +501,7 @@ h3 {
 
 .infinite-scroll-wrapper {
   width: 100%;
-  overflow-x: scroll;
+  overflow-x: hidden;
   white-space: nowrap;
 }
 
