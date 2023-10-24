@@ -23,7 +23,7 @@
   border-bottom: 1px dashed #ff5959;
 }
 
-body {
+html, body {
   padding-top: 5em;
   overflow-x: hidden;
 }
