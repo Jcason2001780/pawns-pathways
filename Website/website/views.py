@@ -13,10 +13,15 @@ def leadership():
 
     return render_template("/leadership/index.html")
 
-@views.route('/news')
-def news():
+@views.route('/blog')
+def blog():
 
-    return render_template("/news/index.html")
+    return render_template("/blog/index.html")
+
+@views.route('/coverage')
+def coverage():
+
+    return render_template("/coverage/index.html")
 
 @views.route('/curriculum')
 def curriculum():
