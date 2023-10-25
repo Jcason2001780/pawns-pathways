@@ -5,67 +5,55 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://pawnspathways.org/news</loc>
+        <loc>https://pawnspathways.org/blog</loc>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://pawnspathways.org/news/blog</loc>
+        <loc>https://pawnspathways.org/coverage</loc>
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://pawnspathways.org/news/coverage</loc>
+        <loc>https://pawnspathways.org/plainsboro</loc>
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://pawnspathways.org/libraries</loc>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://pawnspathways.org/libraries/plainsboro</loc>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://pawnspathways.org/libraries/trenton</loc>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://pawnspathways.org/libraries/hamilton</loc>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://pawnspathways.org/libraries/princeton</loc>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://pawnspathways.org/libraries/franklin</loc>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://pawnspathways.org/libraries/cranbury</loc>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://pawnspathways.org/libraries/brunswick</loc>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://pawnspathways.org/libraries/monroe</loc>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://pawnspathways.org/resources</loc>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://pawnspathways.org/resources/curriculum</loc>
+        <loc>https://pawnspathways.org/trenton</loc>
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://pawnspathways.org/resources/classes</loc>
+        <loc>https://pawnspathways.org/hamilton</loc>
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://pawnspathways.org/resources/events</loc>
+        <loc>https://pawnspathways.org/princeton</loc>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://pawnspathways.org/franklin</loc>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://pawnspathways.org/cranbury</loc>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://pawnspathways.org/brunswick</loc>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://pawnspathways.org/monroe</loc>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://pawnspathways.org/curriculum</loc>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://pawnspathways.org/classes</loc>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://pawnspathways.org/events</loc>
         <priority>0.6</priority>
     </url>
     <url>
