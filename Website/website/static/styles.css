@@ -23,7 +23,8 @@
   border-bottom: 1px dashed #ff5959;
 }
 
-html, body {
+html,
+body {
   padding-top: 5em;
   overflow-x: hidden;
 }
@@ -443,6 +444,13 @@ h3 {
   margin: 0em 0.5em;
 }
 
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 #intro .top-img {
   max-width: 100%;
 }
@@ -507,18 +515,21 @@ h3 {
 
 .infinite-scroll-container {
   display: inline-block;
-  animation: scrollAnimation 15s linear infinite; 
+  animation: scrollAnimation 15s linear infinite;
 }
 
 .cell {
   display: inline-block;
-  width: 330px;  /* Adjusting width */
-  height: 375px; /* Adjusting height */
+  width: 330px;
+  /* Adjusting width */
+  height: 375px;
+  /* Adjusting height */
   padding: 15px;
   box-sizing: border-box;
   margin-right: 15px;
   text-align: center;
-  background-color: #E8E8E8; /* Setting the cell background to the color you provided */
+  background-color: #E8E8E8;
+  /* Setting the cell background to the color you provided */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -552,10 +563,11 @@ h3 {
 
 @keyframes scrollAnimation {
   0% {
-      transform: translateX(0%);
+    transform: translateX(0%);
   }
+
   100% {
-      transform: translateX(-50%);
+    transform: translateX(-50%);
   }
 }
 
