@@ -111,6 +111,13 @@ body li {
   margin-bottom: 6em;
 }
 
+.library-desc {
+  text-align: left;
+  max-width: 50rem;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
 .info-section {
   display: -webkit-box;
   display: -ms-flexbox;
