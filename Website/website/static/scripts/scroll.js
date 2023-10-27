@@ -1,44 +1,50 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const scrollContainer = document.querySelector('.infinite-scroll-container');
-    const leftArrow = document.querySelector('.arrow.left');
-    const rightArrow = document.querySelector('.arrow.right');
-
-    leftArrow.addEventListener('mouseover', pauseAnimation);
-    leftArrow.addEventListener('mouseout', resumeAnimation);
-    leftArrow.addEventListener('click', () => scrollContainerOnClick('left'));
-
-    rightArrow.addEventListener('mouseover', pauseAnimation);
-    rightArrow.addEventListener('mouseout', resumeAnimation);
-    rightArrow.addEventListener('click', () => scrollContainerOnClick('right'));
-
-    function pauseAnimation() {
-      scrollContainer.style.animationPlayState = 'paused';
-    }
-
-    function resumeAnimation() {
-      scrollContainer.style.animationPlayState = 'running';
-    }
-
-    function scrollContainerOnClick(direction) {
-        console.log(`Arrow clicked: ${direction}`);
-        console.log('Current play state:', scrollContainer.style.animationPlayState);
-        
-        const originalDuration = getComputedStyle(scrollContainer).animationDuration;
-        scrollContainer.style.animationDuration = '1s';  // Setting a shorter duration
-    
-        scrollContainer.style.animationPlayState = 'running';
-    
-        if (direction === 'left') {
-            scrollContainer.style.animationDirection = 'reverse';
-        } else {
-            scrollContainer.style.animationDirection = 'normal';
-        }
-        
-        setTimeout(() => {
-            scrollContainer.style.animationPlayState = 'paused';
-            scrollContainer.style.animationDuration = originalDuration;  // Reverting back to original duration
-            scrollContainer.style.animationDirection = 'normal';
-        }, 1000);
-    }
-    
+    initializeScrolling('.news-coverage');
+    initializeScrolling('.partnered-libraries');
 });
+
+function initializeScrolling(sectionSelector) {
+    const section = document.querySelector(sectionSelector);
+    const scrollContainer = section.querySelector('.infinite-scroll-container');
+    const scrollWrapper = section.querySelector('.infinite-scroll-wrapper');
+    const leftArrow = section.querySelector('.arrow.left');
+    const rightArrow = section.querySelector('.arrow.right');
+
+    const middlePosition = (scrollContainer.scrollWidth - scrollWrapper.clientWidth) / 2;
+    scrollWrapper.scrollLeft = middlePosition;
+
+    let leftArrowPressCount = 4;
+    let rightArrowPressCount = 4;
+
+    function updateArrowPositions() {
+        const rect = scrollWrapper.getBoundingClientRect();
+        leftArrow.style.top = rightArrow.style.top = (rect.top + rect.height / 2) + 'px';
+    }
+
+    function handleArrowClick(direction) {
+        if (direction === 'left' && leftArrowPressCount > 0) {
+            scrollWrapper.scrollBy({ left: -350, behavior: 'smooth' });
+            leftArrowPressCount--;
+            rightArrowPressCount = Math.min(rightArrowPressCount + 2, 8 - leftArrowPressCount);
+        } else if (direction === 'right' && rightArrowPressCount > 0) {
+            scrollWrapper.scrollBy({ left: 350, behavior: 'smooth' });
+            rightArrowPressCount--;
+            leftArrowPressCount = Math.min(leftArrowPressCount + 2, 8 - rightArrowPressCount);
+        }
+    }
+
+    leftArrow.addEventListener('click', () => handleArrowClick('left'));
+    rightArrow.addEventListener('click', () => handleArrowClick('right'));
+
+    // Prevent horizontal scrolling with mouse wheel
+    scrollWrapper.addEventListener('wheel', (event) => {
+        if (event.deltaY !== 0) {
+            scrollWrapper.scrollLeft += event.deltaY;
+            event.preventDefault();
+        }
+    }, { passive: false });
+
+    // Update the arrow positions initially and whenever the user scrolls
+    updateArrowPositions();
+    document.addEventListener('scroll', updateArrowPositions);
+}
