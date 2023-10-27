@@ -13,8 +13,8 @@ function initializeScrolling(sectionSelector) {
     const middlePosition = (scrollContainer.scrollWidth - scrollWrapper.clientWidth) / 2;
     scrollWrapper.scrollLeft = middlePosition;
 
-    let leftArrowPressCount = 4;
-    let rightArrowPressCount = 4;
+    let leftArrowPressCount = 6;
+    let rightArrowPressCount = 6;
 
     function updateArrowPositions() {
         const rect = scrollWrapper.getBoundingClientRect();
