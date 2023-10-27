@@ -568,6 +568,47 @@ h3 {
   background-color: #0056b3;
 }
 
+.infinite-scroll-wrapper {
+  position: relative;
+  width: 100%;
+  overflow-x: none;
+  white-space: nowrap;
+}
+
+.arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  color: #000000;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  user-select: none;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.arrow:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.arrow.left {
+  left: 10px;  /* adjust as necessary */
+}
+
+.arrow.right {
+  right: 10px;  /* adjust as necessary */
+}
+
+.arrow:hover ~ .infinite-scroll-container {
+  animation-play-state: paused;
+}
+
 @keyframes scrollAnimation {
   0% {
     transform: translateX(0%);
