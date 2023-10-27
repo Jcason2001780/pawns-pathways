@@ -74,7 +74,7 @@ def brunswick():
 
     return render_template("/brunswick/index.html")
 
-@views.route('/monroe')
-def monroe():
+@views.route('/windsor')
+def windsor():
 
-    return render_template("/monroe/index.html")
+    return render_template("/windsor/index.html")
