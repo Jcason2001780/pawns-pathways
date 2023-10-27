@@ -37,12 +37,12 @@ function initializeScrolling(sectionSelector) {
     rightArrow.addEventListener('click', () => handleArrowClick('right'));
 
     // Prevent horizontal scrolling with mouse wheel
-    scrollWrapper.addEventListener('wheel', (event) => {
-        if (event.deltaY !== 0) {
-            scrollWrapper.scrollLeft += event.deltaY;
-            event.preventDefault();
+    document.addEventListener('wheel', function(e) {
+        if (e.deltaY !== 0) {
+          e.preventDefault();  // Prevent the default scroll behavior
+          window.scrollBy(0, e.deltaY * 0.5);  // Scrolling speed is half of the normal speed
         }
-    }, { passive: false });
+    }, { passive: false });      
 
     // Update the arrow positions initially and whenever the user scrolls
     updateArrowPositions();
