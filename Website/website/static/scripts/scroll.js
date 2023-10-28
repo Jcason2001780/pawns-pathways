@@ -61,13 +61,6 @@ function initializeScrolling(sectionSelector, initialLeftArrowPressCount, initia
     leftArrow.addEventListener('click', () => handleArrowClick('left'));
     rightArrow.addEventListener('click', () => handleArrowClick('right'));
 
-    // Prevent horizontal scrolling with mouse wheel
-    document.addEventListener('wheel', function(e) {
-        if (e.deltaY !== 0) {
-            e.preventDefault();
-            window.scrollBy(0, e.deltaY * 0.5);
-        }
-    }, { passive: false });
 
     updateArrowPositions();
     document.addEventListener('scroll', updateArrowPositions);

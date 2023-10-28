@@ -574,11 +574,13 @@ h3 {
   overflow-x: hidden;
   white-space: nowrap;
   user-select: none;
-  scrollbar-width: none; /* Firefox */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 .infinite-scroll-wrapper::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Edge */
+  display: none;
+  /* Chrome, Safari, Edge */
 }
 
 .arrow {
@@ -599,11 +601,13 @@ h3 {
 }
 
 .arrow.left {
-  left: 10px;  /* adjust as necessary */
+  left: 10px;
+  /* adjust as necessary */
 }
 
 .arrow.right {
-  right: 10px;  /* adjust as necessary */
+  right: 10px;
+  /* adjust as necessary */
 }
 
 
@@ -611,7 +615,7 @@ h3 {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.arrow:hover ~ .infinite-scroll-container {
+.arrow:hover~.infinite-scroll-container {
   animation-play-state: paused;
 }
 
@@ -840,9 +844,12 @@ h3 {
 
 .modal-dialog {
   display: flex;
-  width: 90%; /* You can set this to any percentage you like */
-  max-width: 90%; /* Or set this to any fixed size you prefer */
-  margin: 1rem auto; /* Adds some space around the modal */
+  width: 90%;
+  /* You can set this to any percentage you like */
+  max-width: 90%;
+  /* Or set this to any fixed size you prefer */
+  margin: 1rem auto;
+  /* Adds some space around the modal */
 }
 
 .modal-content {
