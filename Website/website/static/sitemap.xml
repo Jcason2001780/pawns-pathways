@@ -5,8 +5,12 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://pawnspathways.org/blog</loc>
+        <loc>https://pawnspathways.org/leadership</loc>
         <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://pawnspathways.org/blog</loc>
+        <priority>0.6</priority>
     </url>
     <url>
         <loc>https://pawnspathways.org/coverage</loc>
@@ -41,7 +45,7 @@
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://pawnspathways.org/monroe</loc>
+        <loc>https://pawnspathways.org/windsor</loc>
         <priority>0.6</priority>
     </url>
     <url>
@@ -55,9 +59,5 @@
     <url>
         <loc>https://pawnspathways.org/events</loc>
         <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://pawnspathways.org/leadership</loc>
-        <priority>0.8</priority>
     </url>
 </urlset>
