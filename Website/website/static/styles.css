@@ -124,6 +124,15 @@ body li {
   margin-top: 20px;
 }
 
+.library-img {
+  object-fit: contain;
+}
+
+.library-container {
+  display: block;
+  text-align: center;
+}
+
 .info-section {
   display: -webkit-box;
   display: -ms-flexbox;
