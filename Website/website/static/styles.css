@@ -1077,15 +1077,15 @@ ul {
   z-index: 1;
 }
 
-.left {
+.tleft {
   left: -0.4%;
 }
 
-.right {
+.tright {
   left: 50.3%;
 }
 
-.left::before {
+.tleft::before {
   content: " ";
   height: 0;
   position: absolute;
@@ -1098,7 +1098,7 @@ ul {
   border-color: transparent transparent transparent white;
 }
 
-.right::before {
+.tright::before {
   content: " ";
   height: 0;
   position: absolute;
@@ -1111,7 +1111,7 @@ ul {
   border-color: transparent white transparent transparent;
 }
 
-.right::after {
+.tright::after {
   left: -16px;
 }
 
@@ -1141,12 +1141,12 @@ ul {
     border-color: transparent white transparent transparent;
   }
 
-  .left::after,
-  .right::after {
+  .tleft::after,
+  .tright::after {
     left: 15px;
   }
 
-  .right {
+  .tright {
     left: 0%;
   }
 }
@@ -1172,11 +1172,11 @@ ul {
   opacity: 1;
 }
 
-.active.left {
+.active.tleft {
   animation: fade-left 0.6s ease-in;
 }
 
-.active.right {
+.active.tright {
   animation: fade-right 0.6s ease-in;
 }
 
