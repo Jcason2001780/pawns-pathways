@@ -407,6 +407,7 @@ h3 {
   font-size: 30px;
 }
 
+
 .navbar .navbar-nav {
   margin-left: auto;
 }
@@ -429,14 +430,14 @@ h3 {
 
 .navbar .dropdown-item:hover {
   color: black;
-  background-color: rgba(255,255,255,0);
+  background-color: rgba(255, 255, 255, 0);
   -webkit-transition: .3s;
   transition: .3s;
 
 }
 
 .navbar .custom-toggler.navbar-toggler {
-  border-color: rgba(255,255,255,0);
+  border-color: rgba(255, 255, 255, 0);
   outline: none;
 }
 
@@ -446,7 +447,7 @@ h3 {
 
 .dropdown-menu {
   border: none;
-  background-color: rgba(255,255,255,0);
+  background-color: rgba(255, 255, 255, 0);
   margin-top: 0;
 }
 
@@ -464,6 +465,11 @@ h3 {
   max-width: 100%;
   max-height: 100%;
   object-fit: cover;
+}
+
+#calendar {
+  max-width: 1100px;
+  margin: 40px auto;
 }
 
 #intro {

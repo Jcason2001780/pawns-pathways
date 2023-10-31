@@ -20,7 +20,8 @@
     <!-- Bootstrap Meta Tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="An officially registered nonprofit dedicated to empowering children through chess.">
+    <meta name="description"
+        content="An officially registered nonprofit dedicated to empowering children through chess.">
     <meta name="keywords" content="pawns pathways, pawnspathways, pawns, pathways, chess nonprofit, chess, nonprofit">
 
     <!-- Bootstrap CSS -->
@@ -36,6 +37,8 @@
     <link rel="stylesheet" href="/static/media.css" />
     <link href='https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i' rel='stylesheet'>
 
+    <!-- Calendar-->
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js'></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-8B9CVY2J70"></script>
     <script>
@@ -62,35 +65,7 @@
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <section id="header"></section>
-    <section id="pictures">
-        <div class="info-section">
-            <div class="col-lg-6">
-                <h2 class="section-title">Events</h2>
-            </div>
-        </div>
-        <div class="info-section">
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <img src="/static/images/Group1.png" width="350">
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <img src="/static/images/Group1.png" width="350">
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <img src="/static/images/Group1.png" width="350">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="description">
-        <div class="info-section">
-            <div class="col-lg-6">
-                <h2 class="section-title">Placeholder Title</h2>
-                <p class="section-description">Placeholder Description</p>
-            </div>
-        </div>
-    </section>
+    <div id="calendar"></div>
 
     <!-- Bootstrap Javascript -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -111,7 +86,8 @@
             e = d.getElementsByTagName(s)[0]; e.parentNode.insertBefore(i, e);
         })();
     </script>
-    <script type="text/javascript" src="/scripts/ajax.js"></script>
+    <script type="text/javascript" src="/static/scripts/ajax.js"></script>
+    <script type="text/javascript" src="/static/scripts/calendar.js"></script>
 </body>
 
 <section id="footer"></section>
