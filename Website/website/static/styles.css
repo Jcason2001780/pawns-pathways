@@ -399,6 +399,8 @@ h3 {
 
 .navbar {
   padding: .5rem .5rem .5rem 2rem !important;
+  -webkit-box-shadow: 0 0.125rem 1rem rgba(0, 0, 0, 0.075) !important;
+  box-shadow: 0 0.125rem 1rem rgba(0, 0, 0, 0.075) !important;
 }
 
 .navbar .navbar-brand {
@@ -445,34 +447,25 @@ h3 {
 }
 
 .dropdown-menu {
-  border: none;
   background-color: #C9E0BF;
   margin-top: 0;
 }
 
-#video-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #000;
-}
-
-#video-container video {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: cover;
-}
-
 #intro {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
-  padding-bottom: 0;
+  padding-bottom: 5em;
   margin: 0em 0.5em;
-  margin-top: 0;
-  padding-top: 0;
-  margin-bottom: 0;
 }
+
 
 .center {
   display: block;
@@ -1045,10 +1038,6 @@ ul {
   }
 }
 
-#calendar {
-  max-width: 1100px;
-  margin: 40px auto;
-}
 
 .timeline {
   position: relative;
@@ -1248,6 +1237,11 @@ ul {
     transform: translateX(0);
     opacity: 1;
   }
+}
+
+#calendar {
+  max-width: 1100px;
+  margin: 40px auto;
 }
 
 /*# sourceMappingURL=styles.css.map */
