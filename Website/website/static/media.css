@@ -30,6 +30,8 @@
   }
 
   .dropdown-menu {
+    border-top: none;
+    border-radius: 0;
     display: none;
     opacity: 0;
     background-color: #C9E0BF;
@@ -343,7 +345,7 @@
   }
 
   .navbar-nav .dropdown-menu .dropdown-item:first-child {
-    margin-top: 2.25rem;
+    margin-top: 3rem;
   }
 
   .navbar-nav .dropdown-menu .dropdown-item:hover {
