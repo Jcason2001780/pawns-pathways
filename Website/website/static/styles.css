@@ -430,6 +430,10 @@ h3 {
   white-space: nowrap;
 }
 
+.navbar-nav .nav-item:hover .nav-link {
+  color: #707070;
+}
+
 .navbar .dropdown-item {
   color: #333333;
 }
