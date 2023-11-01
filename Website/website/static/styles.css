@@ -331,7 +331,7 @@ h3 {
   display: inline-block;
   width: 1.6rem;
   height: 2px;
-  background: #A2A2A2;
+  background: #333333;
   border-radius: 0.11429rem;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -346,7 +346,7 @@ h3 {
   display: inline-block;
   width: 1.6rem;
   height: 2px;
-  background: #A2A2A2;
+  background: #333333;
   border-radius: 0.11429rem;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -398,14 +398,14 @@ h3 {
 }
 
 .navbar {
-  padding: .5rem .5rem .5rem 2rem !important;
+  padding: .4rem .4rem .4rem 1rem !important;
   -webkit-box-shadow: 0 0.125rem 1rem rgba(0, 0, 0, 0.075) !important;
   box-shadow: 0 0.125rem 1rem rgba(0, 0, 0, 0.075) !important;
 }
 
 .navbar .navbar-brand {
   font-weight: bold;
-  color: black;
+  color: #333333;
   font-size: 30px;
 }
 
@@ -414,7 +414,6 @@ h3 {
 }
 
 .navbar .navbar-nav .nav-item {
-  color: grey;
   font-size: 16px;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -422,15 +421,21 @@ h3 {
 }
 
 .navbar .navbar-nav .nav-item .nav-link {
+  color: #333333;
+  white-space: nowrap;
+}
+
+.navbar .navbar-nav .nav-item .nav-link:hover {
+  color: #707070;
   white-space: nowrap;
 }
 
 .navbar .dropdown-item {
-  color: #555;
+  color: #333333;
 }
 
 .navbar .dropdown-item:hover {
-  color: black;
+  color: #707070;
   background-color: #C9E0BF;
   -webkit-transition: .3s;
   transition: .3s;
@@ -447,6 +452,8 @@ h3 {
 }
 
 .dropdown-menu {
+  border-top: none;
+  border-radius: 0;
   background-color: #C9E0BF;
   margin-top: 0;
 }
@@ -960,13 +967,13 @@ ul {
 }
 
 #footer .links a {
-  color: #888;
+  color: #333333;
   border: 0;
 }
 
 #footer .links a:hover,
 #footer .links a:focus {
-  color: #555;
+  color: #707070;
   margin-left: 3px;
 }
 
@@ -980,7 +987,7 @@ ul {
 
 #footer .social a {
   margin: 0 10px;
-  color: #bbb;
+  color: #333333;
   border: 0;
 }
 
