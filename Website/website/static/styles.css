@@ -497,7 +497,7 @@ h3 {
 }
 
 .video-box {
-  position: relative;
+  position: absolute;
   /* Ensure the text is placed over the video */
   z-index: 1;
   /* Place the text above the video */
@@ -507,6 +507,8 @@ h3 {
   /* Optional: Add a semi-transparent background to make the text more readable */
   color: white;
   margin: 20px;
+  top: 125px;
+  width: 35%;
 }
 
 .center {
