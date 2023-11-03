@@ -402,7 +402,7 @@ h3 {
   padding: .4rem .4rem .4rem 1rem !important;
   -webkit-box-shadow: 0 0.125rem 1rem rgba(0, 0, 0, 0.075) !important;
   box-shadow: 0 0.125rem 1rem rgba(0, 0, 0, 0.075) !important;
-  background-color: #C9E0BF;
+  background-color: rgba(0,0,0,0);
 }
 
 .navbar-inactive {
@@ -410,13 +410,13 @@ h3 {
 }
 
 .navbar-active {
-  background-color: rgba(255, 255, 255, 0);
+  background-color: rgba(0,0,0,0);
 }
 
 
 .navbar .navbar-brand {
   font-weight: bold;
-  color: #333333;
+  color: white;
   font-size: 30px;
 }
 
@@ -432,33 +432,33 @@ h3 {
 }
 
 .navbar .navbar-nav .nav-item .nav-link {
-  color: #333333;
+  color: white;
   white-space: nowrap;
 }
 
 .navbar .navbar-nav .nav-item .nav-link:hover {
-  color: #707070;
+  color: grey;
   white-space: nowrap;
 }
 
 .navbar-nav .dropdown:hover .nav-link {
-  color: #707070;
+  color: grey;
 }
 
 .navbar .dropdown-item {
-  color: #333333;
+  color: white;
 }
 
 .navbar .dropdown-item:hover {
-  color: #707070;
-  background-color: #C9E0BF;
+  color: grey;
+  background-color: rgba(0,0,0,0);
   -webkit-transition: .3s;
   transition: .3s;
 
 }
 
 .navbar .custom-toggler.navbar-toggler {
-  border-color: #C9E0BF;
+  border-color: rgba(0,0,0,0);
   outline: none;
 }
 
@@ -467,9 +467,9 @@ h3 {
 }
 
 .dropdown-menu {
-  border-top: none;
+  border: none;
   border-radius: 0;
-  background-color: #C9E0BF;
+  background-color: rgba(0,0,0,0);
   margin-top: 0;
 }
 
