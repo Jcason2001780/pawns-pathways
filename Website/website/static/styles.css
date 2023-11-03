@@ -402,7 +402,7 @@ h3 {
   padding: .4rem .4rem .4rem 1rem !important;
   -webkit-box-shadow: 0 0.125rem 1rem rgba(0, 0, 0, 0.075) !important;
   box-shadow: 0 0.125rem 1rem rgba(0, 0, 0, 0.075) !important;
-
+  background-color: #C9E0BF;
 }
 
 .navbar-inactive {
