@@ -34,7 +34,7 @@
     border-radius: 0;
     display: none;
     opacity: 0;
-    background-color: #C9E0BF;
+    background-color: rgba(0,0,0,0);
   }
 
   .nav-item.dropdown:hover .dropdown-menu {
@@ -60,13 +60,13 @@
   }
 
   .navbar .navbar-nav .nav-button {
-    background-color: #C9E0BF;
+    background-color: rgba(0,0,0,0);
     font-size: 20px;
     margin: 0 0 0 1.5em;
   }
 
   .navbar .navbar-nav .nav-button .nav-button-text {
-    color: #C9E0BF !important;
+    color: rgba(0,0,0,0) !important;
   }
 
   .navbar .navbar-nav .nav-item {
@@ -349,7 +349,7 @@
 
   .navbar-nav .dropdown-menu .dropdown-item:hover {
     color: #ff5959;
-    background-color: #C9E0BF;
+    background-color: rgba(0,0,0,0);
     -webkit-transform: translateX(-7%);
     transform: translateX(-7%);
     -webkit-transition: .3s;
