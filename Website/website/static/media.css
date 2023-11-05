@@ -34,7 +34,7 @@
     border-radius: 0;
     display: none;
     opacity: 0;
-    background-color: rgb(170, 223, 202);
+    background-color: #C9E0BF;
   }
 
   .nav-item.dropdown:hover .dropdown-menu {
@@ -47,12 +47,9 @@
 
   /*computer */
   .navbar {
-    background-color: rgb(145, 240, 216)important;
     padding-top: 10px;
     padding-right: 10em;
     padding-left: 10em;
-    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
   }
 
   .navbar .navbar-brand {
@@ -67,11 +64,11 @@
   }
 
   .navbar .navbar-nav .nav-button .nav-button-text {
-    color: #C9E0BF !important;
+    color: #333333 !important;
   }
 
   .navbar .navbar-nav .nav-item {
-    color: black !important;
+    color: #333333 !important;
     font-weight: 600;
     padding: 1em;
     font-size: 18px;
@@ -134,7 +131,6 @@
     align-items: center;
     text-align: left !important;
     height: 85vh;
-    background-color: rgb(222, 233, 217);
   }
 
   #newsletter .newsletter-box-title {
@@ -148,7 +144,7 @@
   }
 
   #newsletter .newsletter-button {
-    margin-bottom: 10em;
+    margin-bottom: 0em;
   }
 
   #newsletter .newsletter-box {
@@ -158,7 +154,7 @@
 
   #newsletter .newsletter-img {
     display: inline;
-    max-width: 100%;
+    max-width: 130%;
     margin-left: -12.5em;
   }
 
@@ -203,7 +199,7 @@
     font-family: "Karla", sans-serif;
     height: 100%;
     padding: 2em;
-    background-color: rgb(195, 255, 169);
+    background-color: white;
     color: black;
     /*.team-divider {
               background-color: #FAFAFA !important;
@@ -292,7 +288,7 @@
 
   .programs {
     padding: 0em;
-    background-color: rgb(187, 247, 162);
+    background-color: white;
     color: black;
     margin: 5em 0 5em 0;
   }
@@ -337,6 +333,7 @@
   }
 
   .navbar-nav .dropdown-menu {
+    background-color: #C9E0BF;
     text-align: right;
     border: none;
   }
@@ -350,7 +347,7 @@
   }
 
   .navbar-nav .dropdown-menu .dropdown-item:hover {
-    color: #ff5959;
+    color: #B2B2B2;
     background-color: #C9E0BF;
     -webkit-transform: translateX(-7%);
     transform: translateX(-7%);
@@ -381,11 +378,6 @@
     margin-right: auto;
     margin-left: auto;
     text-align: center;
-  }
-
-  .oppcard {
-    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   }
 }
 
