@@ -94,12 +94,13 @@ body li {
 .leadership-section ol {
   font-size: 18px;
   margin-bottom: 6em;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .info-section .section-title {
   margin-top: 3em;
   margin-bottom: 1em;
-  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 50px;
 }
 
@@ -107,6 +108,7 @@ body li {
 .info-section .section-description {
   margin-bottom: 1em;
   font-size: 20px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
 
@@ -154,12 +156,13 @@ body li {
 .info-section ol {
   font-size: 18px;
   margin-bottom: 6em;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .info-section .section-title {
   margin-top: 3em;
   margin-bottom: 1em;
-  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 50px;
 }
 
@@ -167,8 +170,8 @@ body li {
 .info-section .section-description {
   margin-bottom: 1em;
   font-size: 20px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
 }
-
 
 .info-section .section-description:last-child {
   margin-bottom: 3em;
@@ -512,6 +515,7 @@ h3 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .video-background {
@@ -614,7 +618,7 @@ h3 {
   box-sizing: border-box;
   margin-right: 15px;
   text-align: center;
-  background-color: rgb(166, 245, 232)
+  background-color: rgb(150, 150, 150)
   /* Setting the cell background to the color you provided */
 }
 
@@ -1014,12 +1018,14 @@ ul {
 
 #footer {
   margin-top: 2em;
-  background-color: rgb(250, 199, 165);
+  background-color: rgb(8, 34, 90);
 }
 
 #footer #top {
   text-align: left;
   padding-top: 4em;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  color:#fcfcfc
 }
 
 #footer .contact i {
@@ -1029,13 +1035,13 @@ ul {
 }
 
 #footer .links a {
-  color: #333333;
+  color: #fcfcfc;
   border: 0;
 }
 
 #footer .links a:hover,
 #footer .links a:focus {
-  color: #707070;
+  color: #f3f3f3;
   margin-left: 3px;
 }
 
@@ -1049,7 +1055,7 @@ ul {
 
 #footer .social a {
   margin: 0 10px;
-  color: #333333;
+  color: #f3f3f3;
   border: 0;
 }
 
@@ -1332,7 +1338,7 @@ ul {
 
 .collapsible-active,
 .collapsible:hover {
-  background-color: #678c9b;
+  background-color: #6393a7;
 }
 
 .collapsible-content {
@@ -1348,7 +1354,7 @@ ul {
 }
 
 .article {
-  background-color: rgb(243, 194, 222);
+  background-color: rgb(221, 221, 241);
   padding: 20px;
   margin: 20px;
   margin-top: 60px;
