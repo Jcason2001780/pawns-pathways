@@ -98,17 +98,18 @@ body li {
 
 .leadership-section .section-title {
   margin-top: 3em;
-  margin-bottom: 1em;
-  font-weight: bold;
+  margin-bottom: 0em;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 50px;
 }
 
 .leadership-section .section-description {
   margin-bottom: 1em;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .leadership-section .section-description:last-child {
-  margin-bottom: 6em;
+  margin-bottom: 3em;
 }
 
 .library-desc {
@@ -155,16 +156,17 @@ body li {
 .info-section .section-title {
   margin-top: 3em;
   margin-bottom: 1em;
-  font-weight: bold;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 50px;
 }
 
 .info-section .section-description {
   margin-bottom: 1em;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .info-section .section-description:last-child {
-  margin-bottom: 6em;
+  margin-bottom: 3em;
 }
 
 .intern-faq-question {
@@ -439,7 +441,7 @@ h3 {
 }
 
 .navbar-active {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0,0,0,0);
 }
 
 .navbar-link-inactive {
@@ -539,7 +541,6 @@ h3 {
   width: 35%;
 }
 
-
 .center {
   display: block;
   margin-left: auto;
@@ -607,8 +608,8 @@ h3 {
   box-sizing: border-box;
   margin-right: 15px;
   text-align: center;
-  background-color: rgb(166, 245, 232)
-    /* Setting the cell background to the color you provided */
+  background-color: rgb(149, 167, 164)
+  /* Setting the cell background to the color you provided */
 }
 
 .cell-image {
@@ -1007,7 +1008,7 @@ ul {
 
 #footer {
   margin-top: 2em;
-  background-color: rgb(242, 192, 248);
+  background-color: rgb(250, 199, 165);
 }
 
 #footer #top {
