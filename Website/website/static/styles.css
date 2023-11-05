@@ -39,7 +39,7 @@ body li {
   text-align: center;
   border-radius: 25px;
   font-size: 16px;
-  background: white;
+  background: rgb(201, 253, 179);
   margin-bottom: 20px;
 }
 
@@ -59,7 +59,7 @@ body li {
 }
 
 .section-gray-bg {
-  background-color: #f8f8f8;
+  background-color: rgb(197, 247, 175);
 }
 
 .center {
@@ -580,10 +580,10 @@ h3 {
 }
 
 #newsletter {
-  padding: 3em 1em 5em;
-  margin-top: 4em;
-  margin-bottom: 12em;
-  height: 100vh;
+  padding: 3em 1em 0em;
+  margin-top: 5em;
+  margin-bottom: 0em;
+  height: 150vh;
 }
 
 #newsletter .newsletter-img {
@@ -606,7 +606,7 @@ h3 {
   box-sizing: border-box;
   margin-right: 15px;
   text-align: center;
-  background-color: #E8E8E8;
+  background-color: rgb(166, 245, 232)
   /* Setting the cell background to the color you provided */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -1007,7 +1007,7 @@ ul {
 
 #footer {
   margin-top: 2em;
-  background-color: #f8f8f8;
+  background-color: rgb(242, 192, 248);
 }
 
 #footer #top {
@@ -1341,7 +1341,7 @@ ul {
 }
 
 .article {
-  background-color: rgb(240, 239, 239);
+  background-color: rgb(243, 194, 222);
   padding: 20px;
   margin: 20px;
   margin-top: 60px;
