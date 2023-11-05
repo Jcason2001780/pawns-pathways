@@ -47,7 +47,7 @@
 
   /*computer */
   .navbar {
-     background-color: rgb(145, 240, 216)important;
+    background-color: rgb(145, 240, 216)important;
     padding-top: 10px;
     padding-right: 10em;
     padding-left: 10em;
@@ -381,6 +381,27 @@
     margin-left: auto;
     text-align: center;
   }
+
+  .video-background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -1;
+    height: 100vh;
+  }
+
+  .video-box {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    width: 100%;
+    top: 0px;
+    margin: 20px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -388,6 +409,7 @@
     width: 90%;
     max-width: 1000px;
   }
+
 }
 
 @media screen and (max-width: 767px) {
@@ -416,6 +438,7 @@
     float: none !important;
     max-width: 100%;
   }
+
 }
 
 @media screen and (max-width: 479px) {

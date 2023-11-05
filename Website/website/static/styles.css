@@ -439,7 +439,7 @@ h3 {
 }
 
 .navbar-active {
-  background-color: rgba(0,0,0,0);
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .navbar-link-inactive {
@@ -539,6 +539,7 @@ h3 {
   width: 35%;
 }
 
+
 .center {
   display: block;
   margin-left: auto;
@@ -607,7 +608,7 @@ h3 {
   margin-right: 15px;
   text-align: center;
   background-color: rgb(166, 245, 232)
-  /* Setting the cell background to the color you provided */
+    /* Setting the cell background to the color you provided */
 }
 
 .cell-image {
