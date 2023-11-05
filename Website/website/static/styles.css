@@ -96,21 +96,24 @@ body li {
   margin-bottom: 6em;
 }
 
-.leadership-section .section-title {
+.info-section .section-title {
   margin-top: 3em;
-  margin-bottom: 0em;
+  margin-bottom: 1em;
   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 50px;
 }
 
-.leadership-section .section-description {
+
+.info-section .section-description {
   margin-bottom: 1em;
   font-size: 20px;
 }
 
-.leadership-section .section-description:last-child {
+
+.info-section .section-description:last-child {
   margin-bottom: 3em;
 }
+
 
 .library-desc {
   text-align: left;
@@ -160,14 +163,17 @@ body li {
   font-size: 50px;
 }
 
+
 .info-section .section-description {
   margin-bottom: 1em;
   font-size: 20px;
 }
 
+
 .info-section .section-description:last-child {
   margin-bottom: 3em;
 }
+
 
 .intern-faq-question {
   font-weight: 400;
@@ -608,7 +614,7 @@ h3 {
   box-sizing: border-box;
   margin-right: 15px;
   text-align: center;
-  background-color: rgb(149, 167, 164)
+  background-color: rgb(166, 245, 232)
   /* Setting the cell background to the color you provided */
 }
 
