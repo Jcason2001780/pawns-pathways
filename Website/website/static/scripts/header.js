@@ -8,9 +8,10 @@ function reveal() {
     var navbarseparator = document.querySelectorAll(".nav-separator");
     var navbarimg = document.querySelectorAll(".nav-img");
     var lines = document.querySelector(".lines");
-    
+
     for (var i = 0; i < navbar.length; i++) {
         if (scrollY == 0) {
+
             navbar[i].classList.remove('navbar-inactive');
             navbar[i].classList.add('navbar-active');
         }
