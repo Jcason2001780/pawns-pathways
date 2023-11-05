@@ -47,7 +47,7 @@
 
   /*computer */
   .navbar {
-    background-color: rgb(145, 240, 216)important;
+    background-color: rgb(171, 255, 234);
     padding-top: 10px;
     padding-right: 10em;
     padding-left: 10em;
@@ -132,7 +132,7 @@
     align-items: center;
     text-align: left !important;
     height: 85vh;
-    background-color: rgb(222, 233, 217);
+    background-color: rgb(231, 247, 224);
   }
 
   #newsletter .newsletter-box-title {
