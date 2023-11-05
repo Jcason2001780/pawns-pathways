@@ -34,7 +34,7 @@
     border-radius: 0;
     display: none;
     opacity: 0;
-    background-color: #C9E0BF;
+    background-color: rgb(170, 223, 202);
   }
 
   .nav-item.dropdown:hover .dropdown-menu {
@@ -47,6 +47,7 @@
 
   /*computer */
   .navbar {
+     background-color: rgb(145, 240, 216)important;
     padding-top: 10px;
     padding-right: 10em;
     padding-left: 10em;
@@ -131,6 +132,7 @@
     align-items: center;
     text-align: left !important;
     height: 85vh;
+    background-color: rgb(222, 233, 217);
   }
 
   #newsletter .newsletter-box-title {
@@ -144,7 +146,7 @@
   }
 
   #newsletter .newsletter-button {
-    margin-bottom: 0em;
+    margin-bottom: 10em;
   }
 
   #newsletter .newsletter-box {
@@ -154,7 +156,7 @@
 
   #newsletter .newsletter-img {
     display: inline;
-    max-width: 130%;
+    max-width: 100%;
     margin-left: -12.5em;
   }
 
@@ -199,7 +201,7 @@
     font-family: "Karla", sans-serif;
     height: 100%;
     padding: 2em;
-    background-color: white;
+    background-color: rgb(195, 255, 169);
     color: black;
     /*.team-divider {
               background-color: #FAFAFA !important;
@@ -288,7 +290,7 @@
 
   .programs {
     padding: 0em;
-    background-color: white;
+    background-color: rgb(187, 247, 162);
     color: black;
     margin: 5em 0 5em 0;
   }
