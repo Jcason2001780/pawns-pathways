@@ -23,9 +23,9 @@
   border-bottom: 1px dashed #ff5959;
 }
 
-html,
+html,s
 body {
-  padding-top: 2.75em;
+  padding-top: 20px;
   overflow-x: hidden;
 }
 
@@ -70,7 +70,7 @@ body li {
 }
 
 .margin-bottom {
-  margin-bottom: 1.5rem;
+  margin-bottom: 4.5rem;
 }
 
 .program-link {
@@ -93,28 +93,54 @@ body li {
 
 .leadership-section ol {
   font-size: 18px;
-  margin-bottom: 6em;
+  margin-bottom: 2em;
   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-.info-section .section-title {
-  margin-top: 3em;
-  margin-bottom: 1em;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 50px;
+
+.info-section {
+  display: flex;
+  align-items: center;
 }
 
+.info-section .col-lg-4 {
+  flex: 0 0 auto;
+  width: 50%;
+  padding-right: 5px;
+}
+
+.info-section .col-lg-8 {
+  flex: 0 0 auto;
+  width: 50%;
+  padding-left: 30px;
+}
+
+/* Push the whole section down */
+#mission {
+  padding-top: 40px;
+  background-color: rgb(125, 164, 238);
+}
+
+.info-section .section-title {
+  margin-top: 0px;
+  padding-top: 0px;
+  margin-bottom: 0em;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 30px;
+  line-height: 3; /* Adjust line-height as needed to control vertical alignment */
+}
 
 .info-section .section-description {
   margin-bottom: 1em;
   font-size: 20px;
-  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-
-.info-section .section-description:last-child {
-  margin-bottom: 3em;
+/* Remove extra vertical lines */
+.info-section .col-lg-4:last-child {
+  border-right: none;
 }
+
 
 
 .library-desc {
@@ -156,25 +182,41 @@ body li {
 .info-section ol {
   font-size: 18px;
   margin-bottom: 6em;
-  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.info-section {
+  display: flex;
+  align-items: center;
+}
+
+.info-section .col-lg-4 {
+  flex: 0 0 auto;
+  width: 50%;
+}
+
+.info-section .col-lg-8 {
+  flex: 0 0 auto;
+  width: 50%;
+  padding-left: 50px;
+  border-left: 1px solid #000;
+}
+
+#differences {
+  padding-top: 50px;
+  background-color: lightgray;
 }
 
 .info-section .section-title {
-  margin-top: 3em;
-  margin-bottom: 1em;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 50px;
+  margin-top: 0; /* Reset margin-top to zero, as we're adding top padding/margin to the section */
+  font-size: 30px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
 
 .info-section .section-description {
   margin-bottom: 1em;
   font-size: 20px;
-  font-family:Georgia, 'Times New Roman', Times, serif;
-}
-
-.info-section .section-description:last-child {
-  margin-bottom: 3em;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 
