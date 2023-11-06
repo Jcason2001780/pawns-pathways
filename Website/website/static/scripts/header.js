@@ -7,7 +7,6 @@ function reveal() {
     var navbarlink = document.querySelectorAll(".nav-link");
     var navbarseparator = document.querySelectorAll(".nav-separator");
     var navbarimg = document.querySelectorAll(".nav-img");
-    var lines = document.querySelector(".lines");
 
     for (var i = 0; i < navbar.length; i++) {
         if (scrollY == 0) {
@@ -46,16 +45,6 @@ function reveal() {
         }
         else {
             navbarimg[i].src = '/static/images/home/PPLogoBlack.png';
-        }
-    }
-    for (var i = 0; i < lines.length; i++) {
-        if (scrollY == 0) {
-            lines[i].classList.remove('lines-inactive');
-            lines[i].classList.add('lines-active');
-        }
-        else {
-            lines[i].classList.remove('lines-active');
-            lines[i].classList.add('lines-inactive');
         }
     }
 }
