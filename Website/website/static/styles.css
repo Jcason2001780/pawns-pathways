@@ -24,10 +24,11 @@
 }
 
 html,
-s body {
+body {
   padding-top: 20px;
   overflow-x: hidden;
 }
+
 
 body li {
   margin-bottom: 0.75rem;
@@ -574,8 +575,8 @@ h3 {
 }
 
 .video-background video {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   object-fit: cover;
   /* Ensure the video covers the whole section */
 }
