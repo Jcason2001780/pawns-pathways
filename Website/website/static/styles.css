@@ -749,6 +749,10 @@ h3 {
   animation-play-state: paused;
 }
 
+.infinite-scroll-container:hover {
+  animation-play-state: paused;
+}
+
 @keyframes scrollAnimation {
   0% {
     transform: translateX(0%);
