@@ -47,7 +47,7 @@
 
   /*computer */
   .navbar {
-     background-color: rgb(145, 240, 216)important;
+    background-color: rgb(145, 240, 216)important;
     padding-top: 10px;
     padding-right: 10em;
     padding-left: 10em;
@@ -94,13 +94,13 @@
   #intro .welcome-box-title {
     font-size: 50px;
     font-weight: 800;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
 
   #intro .welcome-box-description {
     font-size: 18px;
     font-weight: 400;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
 
   #intro .welcome-button {
@@ -135,7 +135,7 @@
     text-align: left !important;
     height: 85vh;
     background-color: rgb(201, 201, 201);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   }
 
   #newsletter .newsletter-box-title {
@@ -146,7 +146,7 @@
   #newsletter .newsletter-box-description {
     font-size: 18px;
     font-weight: 400;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   }
 
   #newsletter .newsletter-button {
@@ -385,6 +385,7 @@
     margin-left: auto;
     text-align: center;
   }
+
 }
 
 @media (min-width: 768px) {
