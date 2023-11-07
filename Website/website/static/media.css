@@ -122,7 +122,7 @@
     -webkit-box-flex: row;
     -ms-flex: row;
     flex: row;
-    height: 100vh;
+    height: 85vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -134,8 +134,9 @@
     align-items: center;
     text-align: left !important;
     height: 85vh;
-    background-color: rgb(201, 201, 201);
+    background-color: rgb(240, 240, 240);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-bottom:-2em;
   }
 
   #newsletter .newsletter-box-title {
@@ -150,11 +151,11 @@
   }
 
   #newsletter .newsletter-button {
-    margin-bottom: 10em;
+    margin-bottom: 0em;
   }
 
   #newsletter .newsletter-box {
-    margin-top: 10em;
+    margin-top: 0em;
     float: left;
   }
 
@@ -202,7 +203,7 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    font-family: "Karla", sans-serif;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     height: 100%;
     padding: 2em;
     background-color: rgb(195, 255, 169);
