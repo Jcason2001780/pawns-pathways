@@ -136,7 +136,7 @@
     height: 85vh;
     background-color: rgb(240, 240, 240);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    margin-bottom:-2em;
+    margin-bottom: -2em;
   }
 
   #newsletter .newsletter-box-title {
@@ -203,7 +203,7 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     height: 100%;
     padding: 2em;
     background-color: rgb(195, 255, 169);
@@ -446,6 +446,25 @@
   .modal .modal-dialog {
     position: relative;
     width: auto;
+  }
+
+  .video-box {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    width: 100%;
+    top: -18vh;
+  }
+
+  #intro {
+    height: 110vh;
+  }
+
+  .video-background video {
+    width: 100vw;
+    height: 110vh;
+    object-fit: cover;
   }
 }
 

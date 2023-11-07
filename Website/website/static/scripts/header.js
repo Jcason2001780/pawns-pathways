@@ -47,6 +47,17 @@ function reveal() {
             navbarimg[i].src = '/static/images/home/PPLogoBlack.png';
         }
     }
+    var togglerIcon = document.querySelectorAll(".custom-toggler .navbar-toggler-icon");
+    for (var i = 0; i < togglerIcon.length; i++) {
+        if (scrollY == 0) {
+            togglerIcon[i].classList.remove('toggler-inactive');
+            togglerIcon[i].classList.add('toggler-active');
+        }
+        else {
+            togglerIcon[i].classList.remove('toggler-active');
+            togglerIcon[i].classList.add('toggler-inactive');
+        }
+    }
 }
 
 window.addEventListener("scroll", reveal);
