@@ -603,11 +603,11 @@ h3 {
 }
 
 .navbar-link-active {
-  color: #304674 !important;
+  color: white !important;
 }
 
 .navbar-link-active:hover {
-  color: #304674 !important;
+  color: #B2B2B2 !important;
 }
 
 .navbar-separator-inactive {
