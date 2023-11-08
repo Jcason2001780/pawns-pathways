@@ -135,19 +135,20 @@
     text-align: left !important;
     height: 85vh;
     background-color: rgb(240, 240, 240);
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     margin-bottom: -2em;
   }
 
   #newsletter .newsletter-box-title {
     font-size: 54px;
     font-weight: 800;
+    font-family: 'arvo' !important;
+    color:#0f2672;
   }
 
   #newsletter .newsletter-box-description {
     font-size: 18px;
     font-weight: 400;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', monospace;
   }
 
   #newsletter .newsletter-button {
