@@ -131,6 +131,7 @@ body li {
 .info-section {
   display: flex;
   align-items: center;
+  justify-content: center;
   margin-top: 5em;
   padding-top: 20px;
 }
