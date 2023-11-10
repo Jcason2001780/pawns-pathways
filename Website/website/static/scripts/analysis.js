@@ -1,486 +1,98 @@
-/* Mobile view */
-@media only screen and (max-width: 600px) {
-  .col-lg-3 {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
+var board = null;
+var game = new Chess(); // Initialize the chess game logic
+var isAnalysisMode = false; // Flag to indicate the current mode
+var moveHistory = ['start']; // Start with the initial position
+var currentMoveIndex = 0; // Start at the initial position
+var selectedSquare = null; // Tracks the selected square for click-to-move
 
-  .lead-description {
-    margin-bottom: 80px;
-  }
-
-  .board-container {
-    flex-direction: column;
-  }
-  .buttons-container {
-    display: block;
-  }
+function onSquareClick(square) {
+    if (selectedSquare) {
+        var move = { from: selectedSquare, to: square, promotion: 'q' };
+        if (isAnalysisMode) {
+            onDrop(selectedSquare, square);
+        } else {
+            var result = game.move(move);
+            if (result === null) return; // Illegal move
+            moveHistory.push(game.fen());
+            currentMoveIndex++;
+            board.position(game.fen());
+        }
+        selectedSquare = null;
+    } else if (board.position()[square]) {
+        selectedSquare = square;
+    }
 }
 
-/* Tablet view */
-@media only screen and (min-width: 601px) and (max-width: 992px) {
-  .col-lg-3 {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
+function onDrop(source, target) {
+    if (source === target) return 'snapback'; // Do nothing if dropped on the same square
 
-  .lead-description {
-    margin-bottom: 80px;
-  }
-
-  .board-container {
-    flex-direction: column;
-  }
-  .buttons-container {
-    display: block;
-  }
+    var move = { from: source, to: target, promotion: 'q' }; // Default to promoting to a queen
+    if (isAnalysisMode) {
+        board.move(source + "-" + target);
+        moveHistory.push(board.fen()); // Store the board state in FEN format
+        currentMoveIndex++;
+    } else {
+        var result = game.move(move);
+        if (result === null) return 'snapback'; // Illegal move
+        
+        // Handle special moves like pawn promotion or en passant
+        if (result.flags.includes("p") || result.flags.includes("e")) {
+            board.position(game.fen());
+        } else {
+            board.position(game.fen()); // Update the board for all other moves
+        }
+        
+        moveHistory.push(game.fen());
+        currentMoveIndex++;
+        updateStatus();
+    }
+    return true;
 }
 
-/* Desktop view */
-@media only screen and (min-width: 993px) {
-  .col-lg-3 {
-    flex: 0 0 25%;
-    max-width: 25%;
-  }
+function undoMove() {
+    if (currentMoveIndex <= 0) return; // No move to undo
 
-  .dropdown-menu {
-    border-top: none;
-    border-radius: 0;
-    display: none;
-    opacity: 0;
-    background-color: white;
-  }
-
-  .nav-item.dropdown:hover .dropdown-menu {
-    color: #B2B2B2;
-    display: block;
-    opacity: 1;
-  }
+    currentMoveIndex--;
+    var fen = moveHistory[currentMoveIndex];
+    
+    if (isAnalysisMode) {
+        board.position(fen); // Use Chessboard's position method to set the board
+    } else {
+        game.undo();
+        board.position(fen); // Update the board to reflect the undone move
+    }
 }
 
-@media only screen and (min-width: 991px) {
-
-  /*computer */
-  .navbar {
-    padding-top: 10px;
-    padding-right: 10em;
-    padding-left: 10em;
-  }
-
-  .navbar .navbar-brand {
-    color: black !important;
-    font-size: 30px;
-  }
-
-  .navbar .navbar-nav .nav-button {
-    background-color: white;
-    font-size: 20px;
-    margin: 0 0 0 1.5em;
-  }
-
-  .navbar .navbar-nav .nav-button .nav-button-text {
-    color: #333333 !important;
-  }
-
-  .navbar .navbar-nav .nav-item {
-    color: #333333 !important;
-    font-weight: 600;
-    padding: 1em;
-    font-size: 18px;
-    margin: -0.1em 0.1em;
-  }
-
-  #intro {
-    height: 100vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    text-align: left !important;
-    margin-top: 0em;
-  }
-
-  #intro .welcome-box-title {
-    font-size: 50px;
-    font-weight: 800;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  }
-
-  #intro .welcome-box-description {
-    font-size: 18px;
-    font-weight: 400;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  }
-
-  #intro .welcome-button {
-    margin-bottom: 0em;
-  }
-
-  #intro .welcome-box {
-    margin-top: 8em;
-    float: left;
-  }
-
-  #intro .top-img {
-    display: inline;
-    max-width: 130%;
-    margin-left: 5em;
-  }
-
-  #newsletter {
-    -webkit-box-flex: row;
-    -ms-flex: row;
-    flex: row;
-    height: 85vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    text-align: left !important;
-    height: 85vh;
-    background-color: rgb(240, 240, 240);
-    margin-bottom: -2em;
-  }
-
-  #newsletter .newsletter-box-title {
-    font-size: 54px;
-    font-weight: 800;
-    font-family: 'arvo' !important;
-    color:#0f2672;
-  }
-
-  #newsletter .newsletter-box-description {
-    font-size: 18px;
-    font-weight: 400;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', monospace;
-  }
-
-  #newsletter .newsletter-button {
-    margin-bottom: 0em;
-  }
-
-  #newsletter .newsletter-box {
-    margin-top: 0em;
-    float: left;
-  }
-
-  #newsletter .newsletter-img {
-    display: inline;
-    max-width: 100%;
-    margin-left: -12.5em;
-  }
-
-  #programs {
-    height: 100vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    height: 50vh;
-  }
-
-  .partners {
-    height: 80vh;
-    margin-top: 0em;
-    margin-bottom: 0em;
-  }
-
-  .partners .partners-box-description {
-    margin: 0 5em;
-  }
-
-  .partners .partners-img {
-    max-width: 80%;
-  }
-
-  .team {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    height: 100%;
-    padding: 2em;
-    background-color: rgb(195, 255, 169);
-    color: black;
-    /*.team-divider {
-              background-color: #FAFAFA !important;
-              text-align: center;
-              font-size: 32px !important;
-  
-              .team-divider-header {
-                  color: black !important;
-                  font-weight: 800;
-              }
-          }*/
-  }
-
-  .team .team-box-title {
-    font-size: 32px;
-    font-weight: 800;
-    margin-top: 0em;
-    font-size: 40px;
-  }
-
-  .team .team-box-description {
-    font-size: 18px;
-    font-weight: 400;
-    margin: 1em 12.5em;
-  }
-
-  .team .teamcard {
-    padding: 2em;
-    margin-bottom: -3em;
-    border-radius: 10px;
-    border: 1px white;
-  }
-
-  .team .teamcard .teamcard-image {
-    border-radius: 100px;
-    max-width: 50%;
-  }
-
-  .team .teamcard .teamcard-title {
-    font-weight: 700 !important;
-    font-size: 24px;
-    text-align: center;
-  }
-
-  .team .teamcard .teamcard-description {
-    font-size: 18px;
-    color: rgba(0, 0, 0, 0.7);
-    text-align: center;
-  }
-
-  .breakdown {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    margin-top: 4em;
-    padding: 0em;
-  }
-
-  .breakdown .breakdown-box-title {
-    margin-top: 0em;
-  }
-
-  .breakdown .breakdown-box-description {
-    margin: 1em 5em 2em;
-  }
-
-  .breakdown .breakdown-card {
-    padding: 2em;
-    margin: 0em;
-  }
-
-  .breakdown .breakdown-card .breakdown-card-img-top {
-    max-height: 150px;
-  }
-
-  .breakdown .breakdown-card .breakdown-card-title {
-    font-weight: 800 !important;
-    font-size: 36px;
-  }
-
-  .programs {
-    padding: 0em;
-    background-color: rgb(187, 247, 162);
-    color: black;
-    margin: 5em 0 5em 0;
-  }
-
-  /* Modals */
-  .left {
-    text-align: left;
-  }
+function resetBoard() {
+    board.start(); // Reset the board to the initial position
+    moveHistory = ['start']; // Reset move history with the initial position
+    currentMoveIndex = 0; // Reset the move index
+    selectedSquare = null; // Clear the selected square
+    game.reset(); // Reset the game state for regular mode
 }
 
-@media screen and (max-width: 1475px) {
-  .navbar {
-    padding-left: 5em;
-    padding-right: 5em;
-  }
+document.getElementById('modeToggleBtn').addEventListener('click', function() {
+    isAnalysisMode = !isAnalysisMode; // Toggle the mode
+    resetBoard();
+
+    // Update button text based on the mode
+    this.textContent = isAnalysisMode ? "Regular Mode" : "Analysis Mode";
+});
+
+function updateStatus() {
+    // Update game status like check, checkmate, stalemate, etc.
+    // This can be implemented as per your requirements
 }
 
-@media screen and (max-width: 1200px) {
-  .navbar {
-    padding-left: 3em;
-    padding-right: 3em;
-  }
+board = Chessboard('board', {
+    draggable: true,
+    dropOffBoard: 'trash',
+    sparePieces: true,
+    position: 'start',
+    pieceTheme: '/static/images/game/{piece}.png',
+    onDrop: onDrop,
+    onSquareClick: onSquareClick
+});
 
-  .navbar .navbar-nav .nav-item {
-    padding-left: 0;
-    padding-right: 0;
-    margin-right: 1rem;
-    margin-left: 1rem;
-  }
-}
-
-@media screen and (max-width: 991px) {
-
-  /* start of large tablet styles */
-  .navbar-brand {
-    color: black !important;
-    font-size: 30px;
-  }
-
-  .navbar-nav .nav-link {
-    float: right;
-  }
-
-  .navbar-nav .dropdown-menu {
-    background-color: white;
-    text-align: right;
-    border: none;
-  }
-
-  .navbar-nav .dropdown-menu .dropdown-item {
-    padding: .35rem 1rem;
-  }
-
-  .navbar-nav .dropdown-menu .dropdown-item:first-child {
-    margin-top: 3rem;
-  }
-
-  .navbar-nav .dropdown-menu .dropdown-item:hover {
-    color: #B2B2B2;
-    background-color: white;
-    -webkit-transform: translateX(-7%);
-    transform: translateX(-7%);
-    -webkit-transition: .3s;
-    transition: .3s;
-  }
-
-  #intro #arrow {
-    left: 6rem;
-    bottom: 4rem;
-  }
-
-  .left {
-    text-align: left;
-  }
-
-  .name {
-    padding-top: 10px;
-  }
-
-  .modal:before {
-    content: '';
-    display: inline-block;
-  }
-
-  .btn-primary {
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-    text-align: center;
-  }
-
-  .video-box {
-    position: relative;
-    z-index: 1;
-    background-color: rgba(48, 70, 116, 0.5);
-    color: white;
-    width: 100%;
-    top: -7.5vh;
-  }
-
-  #intro {
-    height: 100vh;
-  }
-}
-
-@media (min-width: 768px) {
-  .modal-xl {
-    width: 90%;
-    max-width: 1000px;
-  }
-}
-
-@media screen and (max-width: 767px) {
-
-  /* start of medium tablet styles */
-  .modal-header .close {
-    margin: -6px;
-  }
-
-  #intro #arrow {
-    bottom: 2rem;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
-  }
-
-  #upcoming img {
-    width: 100%;
-  }
-
-  .float {
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-    text-align: center;
-    float: none !important;
-    max-width: 100%;
-  }
-}
-
-@media screen and (max-width: 479px) {
-
-  /* start of phone styles */
-  .program-box .program-box-text {
-    font-size: 16px;
-  }
-
-  .modal .modal-dialog {
-    position: relative;
-    width: auto;
-  }
-
-  .video-box {
-    position: relative;
-    z-index: 1;
-    background-color: rgba(48, 70, 116, 0.5);
-    color: white;
-    width: 100%;
-    top: -18vh;
-  }
-
-  #intro {
-    height: 110vh;
-  }
-
-  .video-background video {
-    width: 100vw;
-    height: 110vh;
-    object-fit: cover;
-  }
-}
-
-/*# sourceMappingURL=media.css.map */
+document.getElementById('undoBtn').addEventListener('click', undoMove);
+document.getElementById('resetBtn').addEventListener('click', resetBoard);
