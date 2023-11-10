@@ -792,6 +792,9 @@ h3 {
   width: 100%;
   overflow-x: hidden;
   white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   scrollbar-width: none;
   /* Firefox */
@@ -815,6 +818,9 @@ h3 {
   align-items: center;
   justify-content: center;
   border-radius: 20px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   background-color: rgba(0, 0, 0, 0.2);
 }
@@ -1490,7 +1496,7 @@ ul {
   background-color: #f1f1f190;
   text-align: center;
   padding-top: 0px;
-  margin-left: 150px;
+  margin-left: 10%;
 }
 
 .article {
@@ -1510,6 +1516,10 @@ ul {
   align-items: center; /* Aligns items vertically in the center */
   justify-content: center; /* Centers items horizontally */
   margin: 0 auto; /* Centers the container itself */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .buttons-container {
@@ -1518,6 +1528,7 @@ ul {
   justify-content: center; /* Aligns buttons in the center of the container */
   margin-left: 20px; /* Adds some space between the board and the buttons */
   margin-top: 5px;
+  
 }
 
 .analysis-button {
