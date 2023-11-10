@@ -559,7 +559,7 @@ h3 {
 }
 
 .navbar .navbar-nav .nav-item .nav-link:hover {
-  color: #304674;
+  color: #B2B2B2;
   white-space: nowrap;
 }
 
@@ -569,12 +569,12 @@ h3 {
 
 .navbar .dropdown-item {
   color: #304674;
+  background-color: white;
 }
 
 .navbar .dropdown-item:hover {
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-
+  color: white;
+  background-color: #304674;
 }
 
 .navbar .custom-toggler.navbar-toggler {
@@ -631,7 +631,7 @@ h3 {
 .dropdown-menu {
   border: none;
   border-radius: 0;
-  background-color: #C9E0BF;
+  background-color: white;
   margin-top: 0;
 }
 
@@ -674,7 +674,7 @@ h3 {
   /* Place the text above the video */
   padding: 20px;
   /* Add some padding around the text */
-  background-color: #4c72ac81;
+  background-color: rgba(48, 70, 116, 0.5);
   /* Optional: Add a semi-transparent background to make the text more readable */
   color: white;
   margin: 20px;
