@@ -1,58 +1,98 @@
 var board = null;
-var moveHistory = [];
-var currentMoveIndex = -1;
-var selectedSquare = null; // New variable to track selected square
+var game = new Chess(); // Initialize the chess game logic
+var isAnalysisMode = false; // Flag to indicate the current mode
+var moveHistory = ['start']; // Start with the initial position
+var currentMoveIndex = 0; // Start at the initial position
+var selectedSquare = null; // Tracks the selected square for click-to-move
 
 function onSquareClick(square) {
-  if (selectedSquare) {
-    // If a piece is already selected, attempt to move it to the clicked square
-    onDrop(selectedSquare, square, board.position()[selectedSquare]);
-    selectedSquare = null; // Deselect the piece after moving
-  } else if (board.position()[square]) {
-    // If no piece is selected and the clicked square has a piece, select it
-    selectedSquare = square;
-  }
+    if (selectedSquare) {
+        var move = { from: selectedSquare, to: square, promotion: 'q' };
+        if (isAnalysisMode) {
+            onDrop(selectedSquare, square);
+        } else {
+            var result = game.move(move);
+            if (result === null) return; // Illegal move
+            moveHistory.push(game.fen());
+            currentMoveIndex++;
+            board.position(game.fen());
+        }
+        selectedSquare = null;
+    } else if (board.position()[square]) {
+        selectedSquare = square;
+    }
 }
 
-function onDrop(source, target, piece) {
-  if (source === target) return; // Do nothing if dropped on the same square
-  moveHistory.splice(currentMoveIndex + 1, moveHistory.length - currentMoveIndex - 1);
-  moveHistory.push({ from: source, to: target, piece: piece });
-  currentMoveIndex++;
-  board.position(board.fen()); // Update board position to reflect the move
-  return true;
+function onDrop(source, target) {
+    if (source === target) return 'snapback'; // Do nothing if dropped on the same square
+
+    var move = { from: source, to: target, promotion: 'q' }; // Default to promoting to a queen
+    if (isAnalysisMode) {
+        board.move(source + "-" + target);
+        moveHistory.push(board.fen()); // Store the board state in FEN format
+        currentMoveIndex++;
+    } else {
+        var result = game.move(move);
+        if (result === null) return 'snapback'; // Illegal move
+        
+        // Handle special moves like pawn promotion or en passant
+        if (result.flags.includes("p") || result.flags.includes("e")) {
+            board.position(game.fen());
+        } else {
+            board.position(game.fen()); // Update the board for all other moves
+        }
+        
+        moveHistory.push(game.fen());
+        currentMoveIndex++;
+        updateStatus();
+    }
+    return true;
 }
 
 function undoMove() {
-  if (currentMoveIndex < 0) return; // No move to undo
-  var move = moveHistory[currentMoveIndex];
-  board.move(move.to + '-' + move.from); // Move piece back to original position
-  currentMoveIndex--;
-}
+    if (currentMoveIndex <= 0) return; // No move to undo
 
-function redoMove() {
-  if (currentMoveIndex >= moveHistory.length - 1) return; // No move to redo
-  currentMoveIndex++;
-  var move = moveHistory[currentMoveIndex];
-  board.move(move.from + '-' + move.to); // Reapply the move
+    currentMoveIndex--;
+    var fen = moveHistory[currentMoveIndex];
+    
+    if (isAnalysisMode) {
+        board.position(fen); // Use Chessboard's position method to set the board
+    } else {
+        game.undo();
+        board.position(fen); // Update the board to reflect the undone move
+    }
 }
 
 function resetBoard() {
-  board.start(); // Resets to the initial position
-  moveHistory = [];
-  currentMoveIndex = -1;
+    board.start(); // Reset the board to the initial position
+    moveHistory = ['start']; // Reset move history with the initial position
+    currentMoveIndex = 0; // Reset the move index
+    selectedSquare = null; // Clear the selected square
+    game.reset(); // Reset the game state for regular mode
+}
+
+document.getElementById('modeToggleBtn').addEventListener('click', function() {
+    isAnalysisMode = !isAnalysisMode; // Toggle the mode
+    resetBoard();
+
+    // Update button text based on the mode
+    this.textContent = isAnalysisMode ? "Regular Mode" : "Analysis Mode";
+});
+
+function updateStatus() {
+    // Update game status like check, checkmate, stalemate, etc.
+    // This can be implemented as per your requirements
 }
 
 board = Chessboard('board', {
-  draggable: true,
-  dropOffBoard: 'trash',
-  sparePieces: true,
-  position: 'start',
-  pieceTheme: '/static/images/game/{piece}.png',
-  onDrop: onDrop
+    draggable: true,
+    dropOffBoard: 'trash',
+    sparePieces: true,
+    position: 'start',
+    pieceTheme: '/static/images/game/{piece}.png',
+    onDrop: onDrop,
+    onSquareClick: onSquareClick
 });
 
-// Bind buttons to their respective functions
 document.getElementById('undoBtn').addEventListener('click', undoMove);
-document.getElementById('redoBtn').addEventListener('click', redoMove);
 document.getElementById('resetBtn').addEventListener('click', resetBoard);
