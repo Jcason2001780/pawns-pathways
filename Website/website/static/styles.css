@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Karla&display=swap");
 
 * {
-  font-family: 'lato';
+  font-family:'lato';
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -46,11 +46,11 @@ body li {
 
 
 .custom-toggler .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(30, 46, 74)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
 .custom-toggler.navbar-toggler {
-  border-color: #304674;
+  border-color: rgb(255, 255, 255);
 }
 
 .toggler-active {
@@ -58,7 +58,7 @@ body li {
 }
 
 .toggler-inactive {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(30, 46, 74)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(33,33,33)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
 }
 
 .toggler-border-active {
@@ -66,8 +66,7 @@ body li {
 }
 
 .toggler-border-inactive {
-  border-color: rgb(30, 46, 74) !important;
-
+  border-color: rgb(33, 33, 33) !important;
 }
 
 
@@ -126,7 +125,8 @@ body li {
 }
 
 #mission .info-section {
-  background-image: linear-gradient(to bottom, white 5px, #5078cc);
+  /*background-image: linear-gradient(to bottom, white 5px, #5078cc); */
+  background-color: #ffffff;
 }
 
 .info-section {
@@ -141,12 +141,15 @@ body li {
   flex: 0 0 auto;
   width: 50%;
   padding-right: 5px;
+  bottom:30px;
 }
 
 .info-section .col-lg-8 {
   flex: 0 0 auto;
   width: 50%;
   padding-left: 30px;
+  left: -24px;
+  bottom: 20px;
 }
 
 .info-section .section-title {
@@ -157,13 +160,15 @@ body li {
   font-family: 'arvo' !important;
   font-size: 50px;
   line-height: 3;
-  color: #305ea3;
+  color:#305ea3;
   /* Adjust line-height as needed to control vertical alignment */
 }
 
 .info-section .section-description {
   margin-bottom: 1em;
   font-size: 20px;
+  color: #305ea3;
+  padding-bottom: 40px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -222,47 +227,52 @@ body li {
   display: flex;
   align-items: center;
   margin-top: 3em;
-  background-image: linear-gradient(to bottom, #5078cc, lightgray, white);
+  background-color: #6b9ebe;
 
 }
 
-.info-section .col-lg-4 {
+.info-section2 .col-lg-4 {
   flex: 0 0 auto;
   width: 50%;
+  bottom: 50px;
 }
 
-.info-section .col-lg-8 {
+.info-section2 .col-lg-8 {
   flex: 0 0 auto;
   width: 50%;
   padding-left: 50px;
-  left: 4px;
+  font-size: 20px;
+  left: -24px;
+  bottom: 20px;
   border-left: 1px solid #000;
 }
 
 #differences {
   padding-top: 30px;
-  background-color: #5078cc
+  background-color: #6b9ebe;
 }
 
 .info-section2 .section-title {
   margin-bottom: 30px;
-  font-size: 50px;
-  color: #305ea3;
+  font-size: 70px;
+  margin-right: 30px;
+  color:#104391;
   font-family: 'arvo' !important;
 }
 
 .info-section2 .section-description {
   margin-bottom: 1em;
-  font-size: 30px !important;
+  font-size: 40px !important;
+  color: #104391;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .info-section .section-description::before {
   content: "";
   position: absolute;
-  top: 770px;
-  bottom: -890px;
-  left: 0px;
+  top: 0px;
+  bottom: 0px;
+  left: -50px;
   /* Adjust as needed to control the position of the line */
   width: 1px;
   /* Adjust as needed for line thickness */
@@ -273,6 +283,7 @@ body li {
 #statistics {
   background-color: #5078cc;
   padding: 40px 0;
+  padding-top: 80px;
 }
 
 .statistics-content {
@@ -406,8 +417,8 @@ b {
 .h1-center {
   text-align: center;
   font-size: 60px;
-  font-weight: 700;
-  color: #08225a;
+  font-weight:700;
+  color:#08225a;
 }
 
 h2 {
@@ -1504,41 +1515,6 @@ ul {
 
 .cpointer {
   cursor: pointer;
-}
-
-.board-container {
-  display: flex;
-  align-items: center;
-  /* Aligns items vertically in the center */
-  justify-content: center;
-  /* Centers items horizontally */
-  margin: 0 auto;
-  /* Centers the container itself */
-}
-
-.buttons-container {
-  display: flex;
-  flex-direction: column;
-  /* Stacks buttons vertically */
-  justify-content: center;
-  /* Aligns buttons in the center of the container */
-  margin-left: 20px;
-  /* Adds some space between the board and the buttons */
-}
-
-.analysis-button {
-  background-color: #1874ac;
-  color: #ffffff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 18px;
-  margin-top: 5px;
-}
-
-.analysis-button:hover {
-  background-color: #0056b3;
 }
 
 /*# sourceMappingURL=styles.css.map */
