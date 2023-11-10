@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Karla&display=swap");
 
 * {
-  font-family:'lato';
+  font-family: 'lato';
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -46,11 +46,11 @@ body li {
 
 
 .custom-toggler .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(30, 46, 74)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
 .custom-toggler.navbar-toggler {
-  border-color: rgb(255, 255, 255);
+  border-color: #304674;
 }
 
 .toggler-active {
@@ -58,7 +58,7 @@ body li {
 }
 
 .toggler-inactive {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(33,33,33)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(30, 46, 74)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
 }
 
 .toggler-border-active {
@@ -66,7 +66,8 @@ body li {
 }
 
 .toggler-border-inactive {
-  border-color: rgb(33, 33, 33) !important;
+  border-color: rgb(30, 46, 74) !important;
+
 }
 
 
@@ -156,7 +157,7 @@ body li {
   font-family: 'arvo' !important;
   font-size: 50px;
   line-height: 3;
-  color:#305ea3;
+  color: #305ea3;
   /* Adjust line-height as needed to control vertical alignment */
 }
 
@@ -246,7 +247,7 @@ body li {
 .info-section2 .section-title {
   margin-bottom: 30px;
   font-size: 50px;
-  color:#305ea3;
+  color: #305ea3;
   font-family: 'arvo' !important;
 }
 
@@ -405,8 +406,8 @@ b {
 .h1-center {
   text-align: center;
   font-size: 60px;
-  font-weight:700;
-  color:#08225a;
+  font-weight: 700;
+  color: #08225a;
 }
 
 h2 {
@@ -1507,16 +1508,22 @@ ul {
 
 .board-container {
   display: flex;
-  align-items: center; /* Aligns items vertically in the center */
-  justify-content: center; /* Centers items horizontally */
-  margin: 0 auto; /* Centers the container itself */
+  align-items: center;
+  /* Aligns items vertically in the center */
+  justify-content: center;
+  /* Centers items horizontally */
+  margin: 0 auto;
+  /* Centers the container itself */
 }
 
 .buttons-container {
   display: flex;
-  flex-direction: column; /* Stacks buttons vertically */
-  justify-content: center; /* Aligns buttons in the center of the container */
-  margin-left: 20px; /* Adds some space between the board and the buttons */
+  flex-direction: column;
+  /* Stacks buttons vertically */
+  justify-content: center;
+  /* Aligns buttons in the center of the container */
+  margin-left: 20px;
+  /* Adds some space between the board and the buttons */
 }
 
 .analysis-button {
