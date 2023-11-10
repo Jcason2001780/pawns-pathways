@@ -8,6 +8,13 @@
   .lead-description {
     margin-bottom: 80px;
   }
+
+  .board-container {
+    flex-direction: column;
+  }
+  .buttons-container {
+    display: block;
+  }
 }
 
 /* Tablet view */
@@ -19,6 +26,13 @@
 
   .lead-description {
     margin-bottom: 80px;
+  }
+
+  .board-container {
+    flex-direction: column;
+  }
+  .buttons-container {
+    display: block;
   }
 }
 
