@@ -45,6 +45,12 @@ def events():
     return render_template("/events/index.html")
 
 
+@views.route('/analysis')
+def analysis():
+
+    return render_template("/analysis/index.html")
+
+
 @views.route('/plainsboro')
 def plainsboro():
 
