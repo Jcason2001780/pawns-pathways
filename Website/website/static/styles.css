@@ -126,10 +126,6 @@ body li {
   font-family: 'arvo' !important;
 }
 
-#mission .info-section {
-  background-image: linear-gradient(to bottom, white 5px, #5078cc);
-}
-
 .info-section {
   display: flex;
   align-items: center;
@@ -223,8 +219,6 @@ body li {
   display: flex;
   align-items: center;
   margin-top: 3em;
-  background-image: linear-gradient(to bottom, #5078cc, lightgray, white);
-
 }
 
 .info-section .col-lg-4 {
@@ -242,7 +236,6 @@ body li {
 
 #differences {
   padding-top: 30px;
-  background-color: #5078cc
 }
 
 .info-section2 .section-title {
@@ -272,8 +265,8 @@ body li {
 }
 
 #statistics {
-  background-color: #5078cc;
   padding: 40px 0;
+  margin-top: 40px;
 }
 
 .statistics-content {
@@ -282,42 +275,14 @@ body li {
   align-items: center;
 }
 
-.stat {
-  text-align: center;
-  width: 30%;
-  padding: 10px;
-  background-color: #fff;
-  /* Background color for the statistics boxes */
-  border: 1px solid rgb(0, 0, 0);
-  /* Border color for the boxes */
-  border-radius: 5px;
-  /* Rounded corners for the boxes */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  /* Box shadow for the boxes */
-}
-
-.stat h3 {
-  font-size: 24px;
-
-}
-
-.stat p {
-  font-size: 16px;
-  /*color: #your-statistic-text-color;*/
-}
-
-
 .small-image {
-  max-width: 380px;
-  /* Adjust the maximum width as needed */
-  max-height: 380px;
-  /* Adjust the maximum height as needed */
-  display: block;
-  /* Remove any extra spacing around the image */
-  margin: 0 auto;
+  max-width: 380px; /* Adjust the maximum width as needed */
+  max-height: 380px; /* Adjust the maximum height as needed */
+  display: block; /* Remove any extra spacing around the image */
+  margin: 0 auto; /* Center the image */
+  border: 5px solid #304674; /* Thick black border */
+  border-radius: 20px; /* Rounded corners */
 }
-
-
 
 .intern-faq-question {
   font-weight: 400;
@@ -1110,6 +1075,60 @@ h3 {
 .modal-backdrop {
   background-color: black;
   opacity: 0.2;
+}
+
+/* Section styling */
+.custom-info-section, .custom-info-section2 {
+  margin-bottom: 30px;
+  padding: 30px;
+  background: #ffffff; /* white background */
+  border-radius: 10px;
+}
+
+/* Column styling */
+.custom-col-title, .custom-col-content {
+  padding: 20px;
+}
+
+/* Responsive columns for larger screens */
+@media (min-width: 768px) {
+  .custom-col-title {
+      float: left;
+      width: 30%; /* adjusted for better spacing */
+      padding-right: 10px; /* avoid text sticking to the content */
+  }
+
+  .custom-col-content {
+      float: left;
+      width: 70%; /* adjusted for better spacing */
+      padding-left: 10px; /* aligns text nicely with title */
+  }
+}
+
+/* Title styling */
+.custom-section-title {
+  color: #0056b3; /* a less bright blue for better readability */
+  font-weight: 700; /* bold font for titles */
+  margin-bottom: 20px;
+  font-size: 1.8em; /* larger font size for titles */
+}
+
+/* Description and point styling */
+.custom-section-description, .custom-point {
+  font-size: 1.2em; /* larger font size for better readability */
+  background-color: #f1f8ff; /* lighter blue for subtle effect */
+  border-left: 5px solid #0056b3; /* solid blue line for emphasis */
+  padding: 15px; /* more padding for better text spacing */
+  border-radius: 4px; /* slight rounding of corners */
+}
+
+/* Responsive reset for smaller screens */
+@media (max-width: 767px) {
+  .custom-col-title, .custom-col-content {
+      width: 100%;
+      float: none;
+      padding: 15px; /* consistent padding on small screens */
+  }
 }
 
 .name {
