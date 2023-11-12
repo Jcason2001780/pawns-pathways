@@ -151,13 +151,14 @@
     align-items: center;
     text-align: left !important;
     height: 90vh;
-    background-color: rgb(240, 240, 240);
+    background-color: #dbe8f5;
     margin-bottom: -2em;
   }
 
   #newsletter .newsletter-box-title {
-    font-size: 54px;
-    font-weight: 800;
+    font-size: 60px;
+    margin-left: 40px;
+    font-weight: bolder;
     font-family: 'arvo' !important;
     color: #0f2672;
   }
