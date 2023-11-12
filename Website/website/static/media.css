@@ -151,7 +151,7 @@
     align-items: center;
     text-align: left !important;
     height: 90vh;
-    background-image: linear-gradient(to bottom, white, #c2d1e0); /* Adjust the color and direction as needed */
+    background-image: linear-gradient(to bottom, white, #dbe8f5); /* Adjust the color and direction as needed */
     margin-bottom: -2em;
   }
 
