@@ -399,13 +399,16 @@
     height: 120vh;
   }
 
-  .home-img {
-    display: flex;
-    justify-content: left;
+  .home-img img {
+    margin-left: 0px;
   }
 
   .top-img {
     margin-bottom: 0px;
+  }
+
+  #newsletter .newsletter-box-title {
+    margin-left: 0px;
   }
 
 }
@@ -449,9 +452,17 @@
   }
 }
 
+@media screen and (max-width: 515px) {
+
+  #board {
+    width: 90vw;
+  }
+}
+
 @media screen and (max-width: 479px) {
 
   /* start of phone styles */
+
   .program-box .program-box-text {
     font-size: 16px;
   }
@@ -481,8 +492,13 @@
   }
 
   #newsletter {
-    height: 125vh;
+    height: 135vh;
+  }
+
+  #newsletter .newsletter-box-title {
+    font-size: 50px;
   }
 }
+
 
 /*# sourceMappingURL=media.css.map */

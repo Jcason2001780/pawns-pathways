@@ -1666,6 +1666,11 @@ ul {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  margin-bottom: 40px;
+}
+
+#board {
+  width: 475px;
 }
 
 .buttons-container {
