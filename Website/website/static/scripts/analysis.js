@@ -73,7 +73,6 @@ function resetBoard() {
 
 document.getElementById('modeToggleBtn').addEventListener('click', function() {
     isAnalysisMode = !isAnalysisMode; // Toggle the mode
-    resetBoard();
 
     // Update button text based on the mode
     this.textContent = isAnalysisMode ? "Regular Mode" : "Analysis Mode";
