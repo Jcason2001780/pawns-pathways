@@ -498,6 +498,11 @@
   #newsletter .newsletter-box-title {
     font-size: 50px;
   }
+
+  .leadership-img {
+    width: 300px;
+    height: 300px;
+  }
 }
 
 

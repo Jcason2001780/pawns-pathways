@@ -1669,6 +1669,11 @@ ul {
   margin-bottom: 40px;
 }
 
+.leadership-img {
+  width: 400px;
+  height: 400px;
+}
+
 #board {
   width: 475px;
 }
