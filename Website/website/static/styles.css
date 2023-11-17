@@ -1,5 +1,18 @@
+/* Imported fonts*/
 @import url("https://fonts.googleapis.com/css?family=Karla&display=swap");
 
+
+/* Table of Contents
+1. General Styles
+2. Header 
+3. Footer
+4. Styles for individual pages
+*/
+
+
+/* --------------General styles--------------*/
+
+/* All */
 * {
   font-family: 'lato';
   margin: 0;
@@ -8,6 +21,7 @@
   box-sizing: border-box;
 }
 
+/* Hyperlinks */
 * a {
   color: #ff5959;
   border-bottom: 1px dashed #ccc;
@@ -16,6 +30,7 @@
   transition: all .3s;
 }
 
+/* Hyperlinks on hover*/
 * a:hover,
 * a:active {
   text-decoration: none;
@@ -23,74 +38,14 @@
   border-bottom: 1px dashed #ff5959;
 }
 
+/* Body */
 html,
 body {
   padding-top: 4em;
   overflow-x: hidden;
 }
 
-
-body li {
-  margin-bottom: 0.75rem;
-}
-
-.important {
-  padding: 20px;
-  border: 1px solid #ff5959;
-  text-align: center;
-  border-radius: 25px;
-  font-size: 16px;
-  background: rgb(195, 223, 255);
-  margin-bottom: 20px;
-}
-
-
-.custom-toggler .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(30, 46, 74)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-}
-
-.custom-toggler.navbar-toggler {
-  border-color: #304674;
-}
-
-.toggler-active {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
-}
-
-.toggler-inactive {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(30, 46, 74)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
-}
-
-.toggler-border-active {
-  border-color: rgb(255, 255, 255) !important;
-}
-
-.toggler-border-inactive {
-  border-color: rgb(30, 46, 74) !important;
-
-}
-
-
-
-.icons {
-  font-size: 40px;
-}
-
-.icons a {
-  border: none;
-  color: black;
-  opacity: 0.5;
-}
-
-.icons a:hover {
-  color: #ff5959;
-  opacity: 1;
-}
-
-.section-gray-bg {
-  background-color: rgb(255, 255, 255);
-}
-
+/* To center an element */
 .center {
   display: block;
   margin-right: auto;
@@ -98,13 +53,43 @@ body li {
   text-align: center;
 }
 
-.margin-bottom {
-  margin-bottom: 4.5rem;
+
+/* --------------Header--------------*/
+
+/* Navbar icon on mobile*/
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(30, 46, 74)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
-.program-link {
-  font-weight: bold;
+/* Navbar icon border on mobile*/
+.custom-toggler.navbar-toggler {
+  border-color: #304674;
 }
+
+/* Navbar icon on mobile before scrolling on home page*/
+.toggler-active {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+}
+
+/* Navbar icon on mobile after scrolling on home page*/
+.toggler-inactive {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(30, 46, 74)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+}
+
+/* Navbar icon border on mobile before scrolling on home page*/
+.toggler-border-active {
+  border-color: rgb(255, 255, 255) !important;
+}
+
+/* Navbar icon border on mobile after scrolling on home page*/
+.toggler-border-inactive {
+  border-color: rgb(30, 46, 74) !important;
+
+}
+
+/* --------------Individual page styles--------------*/
+
+/* ------Leadership------ */
 
 .leadership-section {
   display: -webkit-box;
@@ -125,6 +110,7 @@ body li {
   margin-bottom: 2em;
   font-family: 'arvo' !important;
 }
+
 
 .info-section {
   display: flex;
