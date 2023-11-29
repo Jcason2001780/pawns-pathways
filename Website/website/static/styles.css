@@ -162,6 +162,10 @@ ul {
   background-color: #ffffff;
 }
 
+.navbar-home{
+  background-color: rgba(0, 0, 0, 0);
+}
+
 .navbar .navbar-brand {
   font-weight: bold;
   color: #304674;
@@ -182,6 +186,10 @@ ul {
 .navbar .navbar-nav .nav-item .nav-link {
   color: #304674;
   white-space: nowrap;
+}
+
+.navbar .navbar-nav .nav-item .navbar-link-home {
+  color: white;
 }
 
 .navbar .navbar-nav .nav-item .nav-link:hover {
@@ -232,6 +240,7 @@ ul {
   color: white !important;
 }
 
+
 .navbar-link-active:hover {
   color: #b2b2b2 !important;
 }
@@ -265,7 +274,9 @@ ul {
 .custom-toggler .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(30, 46, 74)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
-
+.custom-toggler .navbar-toggler-icon-home {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
 /* Navbar icon border on mobile */
 .custom-toggler.navbar-toggler {
   border-color: #304674;
