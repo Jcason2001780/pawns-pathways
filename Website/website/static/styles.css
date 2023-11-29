@@ -88,10 +88,9 @@ h3 {
 .info-section .section-title {
   margin-top: 0px;
   padding-top: 0px;
-  margin-bottom: 0em;
+  margin-bottom: 1em;
   /*font-family: 'arvo' !important;   need to edit*/
   font-size: 50px;
-  line-height: 3;
   color: #305ea3;
 }
 
