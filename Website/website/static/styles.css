@@ -714,7 +714,8 @@ ul {
 }
 
 .ppintro-container{
-  background-color: #e6ebed;
+  background-color: white;
+  margin-top: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
