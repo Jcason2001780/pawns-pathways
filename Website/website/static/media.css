@@ -5,6 +5,14 @@
     position: relative;
     width: auto;
   }
+  .col-lg-3 {
+    flex: 0 0 50%;
+    max-width: 100%;
+  }
+  .library-desc {
+    max-width: 80vw;
+    margin-left: 60px;
+  }
 
   .video-box {
     position: relative;
@@ -41,6 +49,7 @@
     width: 300px;
     height: 300px;
   }
+
 }
 
 @media screen and (max-width: 515px) {
@@ -87,6 +96,10 @@
 
   .buttons-container {
     display: block;
+  }
+  .library-desc {
+    max-width: 80vw;
+    margin-left: 60px;
   }
 }
 
@@ -162,6 +175,10 @@
 
 @media screen and (max-width: 991px) {
   /* start of large tablet styles */
+  .library-desc {
+    max-width: 80vw;
+    margin-left: 60px;
+  }
   .navbar-brand {
     color: black !important;
     font-size: 30px;
@@ -336,6 +353,12 @@
   }
 }
 
+@media only screen and (min-width: 991px) {
+  .col-lg-3 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
 @media screen and (max-width: 1200px) {
   .navbar {
     padding-left: 3em;
@@ -355,9 +378,11 @@
     padding-left: 5em;
     padding-right: 5em;
   }
+}
+@media only screen and (min-width: 1360px) {
   .col-lg-3 {
-    flex: 0 0 50%;
-    max-width: 50%;
+    flex: 0 0 25%;
+    max-width: 25%;
   }
 }
 

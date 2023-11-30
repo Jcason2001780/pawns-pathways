@@ -78,6 +78,13 @@ h3 {
   padding-top: 20px;
 }
 
+.info-section2 {
+  align-items: center;
+  justify-content: center;
+  margin-top: 5em;
+  padding-top: 20px;
+}
+
 /* Column format */
 .info-section .col-lg-4 {
   flex: 0 0 auto;
@@ -706,6 +713,23 @@ ul {
   /* slight rounding of corners */
 }
 
+.ppintro-container{
+  background-color: #e6ebed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.ppintro-video{
+  width: 70%;
+  height: 70%;
+}
 /* ------Leadership------ */
 
 /* Container for each row of images */
