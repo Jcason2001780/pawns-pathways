@@ -51,49 +51,22 @@ def analysis():
     return render_template("/analysis/index.html")
 
 
-@views.route('/plainsboro')
-def plainsboro():
-
-    return render_template("/plainsboro/index.html")
-
-
-@views.route('/trenton')
-def trenton():
-
-    return render_template("/trenton/index.html")
-
-
-@views.route('/hamilton')
-def hamilton():
-
-    return render_template("/hamilton/index.html")
-
-
-@views.route('/princeton')
-def princeton():
-
-    return render_template("/princeton/index.html")
-
-
-@views.route('/franklin')
-def franklin():
-
-    return render_template("/franklin/index.html")
-
-
-@views.route('/cranbury')
+@views.route('/cpl')
 def cranbury():
 
-    return render_template("/cranbury/index.html")
+    return render_template("/cpl/index.html")
 
+@views.route('/hhc')
+def howard():
 
-@views.route('/brunswick')
-def brunswick():
+    return render_template("/hhc/index.html")
 
-    return render_template("/brunswick/index.html")
+@views.route('/ppl')
+def plainsboro():
 
+    return render_template("/ppl/index.html")
 
-@views.route('/windsor')
+@views.route('/wwl')
 def windsor():
 
-    return render_template("/windsor/index.html")
+    return render_template("/wwl/index.html")
