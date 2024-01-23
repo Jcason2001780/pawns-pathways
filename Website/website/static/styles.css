@@ -23,23 +23,6 @@
   box-sizing: border-box;
 }
 
-/* Hyperlinks */
-* a {
-  color: #ff5959;
-  border-bottom: 1px dashed #ccc;
-  text-decoration: none;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-/* Hyperlinks on hover */
-* a:hover,
-* a:active {
-  text-decoration: none;
-  color: #ff5959;
-  border-bottom: 1px dashed #ff5959;
-}
-
 /* Body */
 html,
 body {
@@ -416,6 +399,14 @@ ul {
   /* Ensure the video covers the whole section */
 }
 
+.homespace {
+  margin-bottom: 1rem;
+}
+
+.homespace2 {
+  margin-right: 1rem;
+}
+
 .video-box {
   position: absolute;
   /* Ensure the text is placed over the video */
@@ -423,12 +414,12 @@ ul {
   /* Place the text above the video */
   padding: 20px;
   /* Add some padding around the text */
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
   /* Optional: Add a semi-transparent background to make the text more readable */
-  color: black;
+  color: white;
   margin: 20px;
   top: 170px;
-  width: 35%;
+  width: 530px;
 }
 
 .large-box-title {
