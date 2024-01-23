@@ -40,11 +40,6 @@
   border-bottom: 1px dashed #ff5959;
 }
 
-/* bold text */
-b {
-  color: #ff5959;
-}
-
 /* Body */
 html,
 body {
@@ -161,6 +156,10 @@ ul {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.bluebold {
+  color: #304674;
 }
 
 .navbar {
@@ -424,9 +423,9 @@ ul {
   /* Place the text above the video */
   padding: 20px;
   /* Add some padding around the text */
-  background-color: rgba(48, 70, 116, 0.5);
+  background-color: rgba(255, 255, 255, 0.4);
   /* Optional: Add a semi-transparent background to make the text more readable */
-  color: white;
+  color: black;
   margin: 20px;
   top: 170px;
   width: 35%;
