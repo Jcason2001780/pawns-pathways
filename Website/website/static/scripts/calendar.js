@@ -4,10 +4,24 @@ function generateBiWeeklyDates(startDate, endDate) {
 
     while (currentDate <= endDate) {
         dates.push(new Date(currentDate));
-        currentDate.setDate(currentDate.getDate() + 14); // Add 14 days for bi-weekly interval
+        currentDate = new Date(currentDate.setDate(currentDate.getDate() + 14));
     }
 
     return dates;
+}
+
+function formatLocalDate(date) {
+    var d = new Date(date),
+        month = '' + (d.getMonth() + 1),
+        day = '' + d.getDate(),
+        year = d.getFullYear();
+
+    if (month.length < 2) 
+        month = '0' + month;
+    if (day.length < 2) 
+        day = '0' + day;
+
+    return [year, month, day].join('-');
 }
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -22,26 +36,30 @@ document.addEventListener('DOMContentLoaded', function () {
         displayEventEnd: true,
         events: [
             {
-                title: 'Plainsboro Library',
-                daysOfWeek: [1], // 0 = Sunday, 1 = Monday, 2 = Tuesday, etc.
-                startRecur: '2023-01-01',
-                endRecur: '2026-01-01',
-            },
-            {
-                title: 'Cranbury Library',
+                title: 'Plainsboro Public Library',
                 daysOfWeek: [1], // Monday
+                startTime: '16:00', // 4 PM
+                endTime: '17:00', // 5 PM
                 startRecur: '2023-01-01',
                 endRecur: '2026-01-01',
             },
             {
-                title: 'Windsor Library',
+                title: 'West Windsor Library',
                 daysOfWeek: [3], // Wednesday
+                startTime: '16:00', // 4 PM
+                endTime: '17:00', // 5 PM
                 startRecur: '2023-01-01',
                 endRecur: '2026-01-01',
             },
-            ...generateBiWeeklyDates(new Date('2023-01-03'), new Date('2026-01-01')).map(date => ({ // Bi-Weekly Tuesday
-                title: 'Trenton Library',
-                start: date.toISOString().split('T')[0]
+            ...generateBiWeeklyDates(new Date('2023-01-14'), new Date('2026-01-01')).map(date => ({
+                title: 'Cranbury Public Library',
+                start: formatLocalDate(date) + 'T15:30:00', // 3:30 PM
+                end: formatLocalDate(date) + 'T16:30:00', // 4:30 PM
+            })),
+            ...generateBiWeeklyDates(new Date('2023-01-11'), new Date('2026-01-01')).map(date => ({
+                title: 'Howard\'s Healthy Choices',
+                start: formatLocalDate(date) + 'T16:00:00', // 4 PM
+                end: formatLocalDate(date) + 'T17:00:00', // 5 PM
             }))
         ]
     });
