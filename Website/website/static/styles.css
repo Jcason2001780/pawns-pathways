@@ -168,7 +168,7 @@ ul {
   background-color: #ffffff;
 }
 
-.navbar-home{
+.navbar-home {
   background-color: rgba(0, 0, 0, 0);
 }
 
@@ -245,7 +245,6 @@ ul {
 .navbar-link-active {
   color: white !important;
 }
-
 
 .navbar-link-active:hover {
   color: #b2b2b2 !important;
@@ -713,9 +712,10 @@ ul {
   /* slight rounding of corners */
 }
 
-.ppintro-container{
+.ppintro-container {
   background-color: white;
   margin-top: 5rem;
+  margin-bottom: 5rem; /*temp*/
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -727,7 +727,7 @@ ul {
   align-items: center;
 }
 
-.ppintro-video{
+.ppintro-video {
   width: 70%;
   height: 70%;
 }
