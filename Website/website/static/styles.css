@@ -706,12 +706,13 @@ ul {
   /* larger font size for better readability */
   background-color: #f1f8ff;
   /* lighter blue for subtle effect */
-  border-left: 3.5px solid #0056b3;
+  border-left: 5px solid #0056b3;
   /* solid blue line for emphasis */
   padding: 15px;
   /* more padding for better text spacing */
   border-radius: 4px;
   /* slight rounding of corners */
+  width: 45vw;
 }
 
 .ppintro-container {
