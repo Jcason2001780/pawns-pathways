@@ -23,7 +23,7 @@
     top: -18vh;
   }
   .homenews {
-    height: 22px;
+    height: 15px;
   }
 
   #intro {
@@ -263,7 +263,7 @@
   }
 
   .homenews {
-    height: 22px;
+    height: 15px;
   }
 }
 @media only screen and (min-width: 991px) {
@@ -358,7 +358,7 @@
   }
 
   .homenews {
-    height: 30px;
+    height: 25px;
   }
 }
 
