@@ -1,6 +1,7 @@
 /* Imported fonts*/
 @import url("https://fonts.googleapis.com/css?family=Karla&display=swap");
-
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+3&display=swap");
 /* Table of Contents
 1. General Styles
 2. Header 
@@ -16,7 +17,7 @@
 
 /* All */
 * {
-  font-family: "";
+  font-family: "Open Sans";
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -430,7 +431,7 @@ ul {
 }
 
 .box-description {
-  font-family: "Source Sans 3" !important;
+  font-family: "Source Sans 3";
   font-size: 18px;
 }
 
@@ -693,6 +694,7 @@ ul {
 /* Description and point styling */
 .custom-section-description,
 .custom-point {
+  font-family: "Source Sans 3";
   font-size: 1.2em;
   /* larger font size for better readability */
   background-color: #f1f8ff;
