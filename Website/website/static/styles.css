@@ -746,7 +746,9 @@ ul {
   width: 400px;
   height: 400px;
 }
-
+.bot-margin {
+  margin-bottom: 8vh;
+}
 .modal {
   background-color: rgba(0, 0, 0, 0.8);
 }

@@ -9,51 +9,23 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://pawnspathways.org/blog</loc>
+        <loc>https://pawnspathways.org/ppl</loc>
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://pawnspathways.org/coverage</loc>
+        <loc>https://pawnspathways.org/cpl</loc>
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://pawnspathways.org/plainsboro</loc>
+        <loc>https://pawnspathways.org/hhc</loc>
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://pawnspathways.org/trenton</loc>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://pawnspathways.org/hamilton</loc>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://pawnspathways.org/princeton</loc>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://pawnspathways.org/franklin</loc>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://pawnspathways.org/cranbury</loc>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://pawnspathways.org/brunswick</loc>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://pawnspathways.org/windsor</loc>
+        <loc>https://pawnspathways.org/wwl</loc>
         <priority>0.6</priority>
     </url>
     <url>
         <loc>https://pawnspathways.org/curriculum</loc>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://pawnspathways.org/classes</loc>
         <priority>0.6</priority>
     </url>
     <url>
