@@ -756,6 +756,22 @@ t {
 .bot-margin {
   margin-bottom: 8vh;
 }
+.volunteer-section {
+  margin-right: 200px;
+  margin-left: 200px;
+}
+.volunteer-margin {
+  margin-bottom: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0;
+  height: 70px;
+}
+.name-container {
+  white-space: nowrap;
+}
 .modal {
   background-color: rgba(0, 0, 0, 0.8);
 }
