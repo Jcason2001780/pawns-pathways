@@ -177,7 +177,6 @@ ul {
   color: #304674;
   white-space: nowrap;
   font-weight: 500;
-  
 }
 
 .navbar .navbar-nav .nav-item .navbar-link-home {
@@ -866,7 +865,9 @@ t {
   display: block;
   text-align: center;
 }
-
+.bot-margin2 {
+  margin-bottom: 2vh;
+}
 /* ------Curriculum------ */
 
 .timeline {
